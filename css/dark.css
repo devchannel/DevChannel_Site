@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Lucida, sans-serif;
+    color: white;
+}
+#left-side{
+    color: white;
+    margin-top: 9em;
+    height: 60%;
+    width: 15%;
+    position: fixed;
+    background-color: #404241;
+    left: 3em;;
+    border: solid 1px #2C993B;
+    border-radius: 0 2em 2em 2em;
+}
+#left-content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+#left-side ul{
+    list-style-type: none;
+}
+
+#left-side li{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#left-side li a{
+    color: white;
+}
+
+#join{
+    font-size: 2.3vw;
+    background-color: #2C993B;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#join-bot{
+     background-color: #2C993B;
+     border-radius: 10px;
+     padding: 5px;
+}
+
+#down-side{
+    display: none
+}
+
+body{
+    background-color: #282828;
+}
+
+
+
+nav{
+    background-color: #666;
+    width: 100%;
+    opacity: 0.8;
+    height: 4em;
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(0,0,0,0.8) 0 0 0.5em;
+}
+
+nav ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(5*8em);
+}
+
+nav ul ul{
+    float: left;
+}
+
+nav ul ul li{
+    width: 8em;
+    height: 4em;
+    list-style-type: none;
+    border-right: 1px solid #11F52F;
+    border-left: 1px solid #11F52F;
+}
+
+.navlogo{
+    width: 8em;
+}
+
+nav ul .sections{
+    width: calc(4*8em);
+}
+
+nav ul .sections li{
+    text-align: center;
+    float: left;
+    width: 8em;
+}
+
+nav ul .sections li a{
+    text-decoration: none;
+    color: white;
+    line-height: 4em;
+    display: block;
+}
+
+nav ul .sections li a:hover{
+    background: #777;
+}
+
+/*Nav Bar change*/
+@media screen and (max-width: 35em){
+    nav{
+        position: static;
+        width: 100%;
+        height: calc(5*4em);
+    }
+    nav ul{
+        text-align: center;
+        width: 100%;
+        float: none;
+    }
+    nav ul ul li{
+        border: 1px solid #11F52F;
+    }
+    .navlogo{
+        width: 100%;
+        float: none;
+        align-items: center;
+        border: none;
+    }
+    nav ul .sections{
+        float: none;
+        width: 100%;
+    }
+    nav ul .sections li{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+
+/*side bar to bottom bar change*/
+@media screen and (max-width: 69em) {
+    #left-side{
+        display: none;
+    }
+    #down-side{
+        margin: 0;
+        padding: 0;
+        display: block;
+        background-color: #404241;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border: solid 1px #2C993B;
+    }
+    #down-side ul{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #down-side li{
+        float:left;
+        list-style-type: none;
+        font-size: 4vh;
+    }
+
+    #down-side li a{
+        color: white;
+    }
+    .container{
+        margin-bottom: 4vh;
+    }
+}
+
+#title{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+    color: #F0F0F0;
+    font-family: Lucida, sans-serif;
+    font-size: 2em;
+}
+
+
+.link{
+    color: #14D8FF;
+}
+
+.link:visited{
+    color: #FF99BD;
+}
+
+.container{
+    width: 100%;
+    margin-top: 4em;
+}
+
+.content_container{
+    width: 100%;
+    max-width: 47em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.announcement_container{
+    background-color: #666;
+    color: #C7C7C7;
+    font-size: 1em;
+    margin: 1em 0 1em 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border:solid #11F52F 1px;
+    border-radius: 0.2em 2em 2em;
+    box-shadow: rgba(0,0,0,0.8) 0 0 0.5em;
+}
+
+.posters_name{
+    font-weight: bold;
+    /*color: #ECFF1F; yellow*/
+    color: white;
+}
+
+.post_title{
+    font-weight: bold;
+    color: #FF7214;
+}
+
+.announcement{
+    margin: 0;
+    padding: 0;
+}
+
+.announcement_container ul{
+    margin-left: 1em;
+}
+
+fieldset{
+    border-bottom: solid 1px #11F52F;
+    padding-bottom: 0.7em;
+}
+
+legend{
+    color: white;
+    border-top: solid 1px #11F52F;
+    border-bottom: none;
+}
+
+input, select, textarea{
+    background-color: #404241;
+    border: none;
+}
+
+#invite_btn{
+    padding: 0.7em;
+    border: 1px solid #11F52F;
+    border-radius: 1em;
+    font-weight: bold;
+}
+#invite_btn:hover{
+    background: linear-gradient(#777, #999, #777);
+}
