@@ -129,3 +129,7 @@ a:hover {
 .form-container .btn-primary {
   background: #1AADFF;
 }
+
+#join-btn:hover {
+  background: #1AD5FF;
+}
