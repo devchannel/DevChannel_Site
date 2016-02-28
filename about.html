@@ -1,91 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> DevChannel - About</title>
-	<!--<script src="js/sw-register.js"></script>-->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/dark.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-	<!--Navbar-->
-	<nav>
-		<ul>
-			<ul class="navlogo">
-				<li><a href="index.html"><img src="files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"
-				width="112px" height="56px"></img></a></li>
-			</ul>
-			<ul class="sections">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="docs.html">Docs</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="resources.html">Resources</a></li>
-			</ul>
-		</ul>
-	</nav>
-	<!--Bottom nav bar (shows up when width is smaller)-->
-	<div id="down-side">
-		<ul>
-			<li><a href="join.html" id="join-bot">JOIN US!</a></li>
-		</ul>
-	</div>
-	<div class="container">
-		<div id="left-side">
-			<div id="left-content">
-				<ul>
-					<li><a href="join.html" id="join">JOIN US!</a></li>
-					<!--<li><a href="#">Suggestions</a></li>-->
-				</ul>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DevChannel</title>
+		<!--<script src="js/sw-register.js"></script>-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/light.css" id="style" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row navthingy">
+			<div class="row">
+				<div class="col-md-1 dev-logo">
+					<a href="index.html"><img src="files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
+				</div>
+				<div class="col-md-1">
+					<h2 class="text-logo">DevChannel</h2>
+				</div>
+				<div class="col-md-2 col-md-offset-7">
+					<h1><a href="join.html" class="join-text">Join us!</a></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2 list-position-control">
+					<ul class="sections">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="docs.html">Docs</a></li>
+						<li><a href="about.html" class="active">About</a></li>
+						<li><a href="resources.html">Resources</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="content_container">
-			<h1 id="title">About DevChannel</h1>
-			<div class="announcement_container">
-				<p class="announcement"><span class="post_title">What is the DevChannel?</span></br>
-					We are a community of differently skilled
-					programmers (from begginers to experts) who hangout in a Slack chatroom. The goal is
-					 to help and be helped, share ideas and
-					 make innovative projects together, all of this in a friendly environment.
-				</p>
-			</div>
-			<div class="announcement_container">
-				<p class="announcement"><span class="post_title">How we started...</span></br>
-					About two months ago, therightman_ posted a thread on
-					/r/learnprogramming about how he wanted to have some friends to
-					learn programming with, which got a good amount of replies. He then started a slack team
-					with about 40 people who wanted to join and their journey started...
-				</br></br>
-					<a class="link" href="https://www.reddit.com/r/learnprogramming/comm
-					ents/3mig3t/programmer_friends/">Click here to visit the original thread</a>
-				</p>
-			</div>
-			<div class="announcement_container">
-				<p class="announcement"><span class="post_title">The admins</span></br>
-					Currently there are three administrators in the group and their usernames are:
-				</p>
-				<ul>
-					<li>therightman_</li>
-					<li>daruso</li>
-					<li>micheal</li>
-				</ul>
-			</div>
-			<div class="announcement_container">
-				<p class="announcement"><span class="post_title">Contact/Help</span></br>
-					You can contact me in the following places:
-				</p>
-				<ul>
-					<li>Reddit: /u/therightman_</li>
-					<li>Twitter: @therightmandev</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 
-		<script src="js/main.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</div>
-</body>
+		<div class="container">
+			<div class="row">
+				<h1 id="title">About DevChannel</h1>
+			</div>
+			<div class="row">
+				<div class="announcement_container">
+					<div class="row posters_name">
+						<h4>What is the DevChannel?</h4>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="announcement">
+								We are a community of differently skilled
+								programmers (from begginers to experts) who hangout in a Slack chatroom. The goal is
+								 to help and be helped, share ideas and
+								 make innovative projects together, all of this in a friendly environment.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="announcement_container">
+					<div class="row posters_name">
+						<h4>How we started...</h4>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="announcement">
+								About two months ago, therightman_ posted a thread on
+								/r/learnprogramming about how he wanted to have some friends to
+								learn programming with, which got a good amount of replies. He then started a slack team
+								with about 40 people who wanted to join and their journey started...
+							</br></br>
+								<a class="link" href="https://www.reddit.com/r/learnprogramming/comm
+								ents/3mig3t/programmer_friends/">Click here to visit the original thread</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="announcement_container">
+					<div class="row posters_name">
+						<h4>The Admins</h4>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="announcement">
+								Currently there are three administrators in the group and their usernames are:
+							</p>
+							<ul>
+								<li>therightman_</li>
+								<li>daruso</li>
+								<li>micheal</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="announcement_container">
+					<div class="row posters_name">
+						<h4>Contact/Help</h4>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="announcement">
+								You can contact me in the following places:
+							</p>
+							<ul>
+								<li>Reddit: /u/therightman_</li>
+								<li>Twitter: @therightmandev</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

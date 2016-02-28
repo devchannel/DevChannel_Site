@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> DevChannel </title>
-	<!--<script src="js/sw-register.js"></script>-->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/dark.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-	<!--Navbar-->
-	<nav>
-		<ul>
-			<ul class="navlogo">
-				<li><a href="index.html"><img src="files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"
-				width="112px" height="56px"></img></a></li>
-			</ul>
-			<ul class="sections">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="docs.html">Docs</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="resources.html">Resources</a></li>
-			</ul>
-		</ul>
-	</nav>
-	<!--Bottom nav bar (shows up when width is smaller)-->
-	<div id="down-side">
-		<ul>
-			<ul>
-			</ul>
-		</ul>
-	</div>
-	<div class="container">
-		<div id="left-side">
-			<div id="left-content">
-				<ul>
-					<!--<li><a href="#">Suggestions</a></li>-->
-				</ul>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DevChannel</title>
+		<!--<script src="js/sw-register.js"></script>-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/light.css" id="style" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row navthingy">
+			<div class="row">
+				<div class="col-md-1 dev-logo">
+					<a href="index.html"><img src="files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
+				</div>
+				<div class="col-md-1">
+					<h2 class="text-logo">DevChannel</h2>
+				</div>
+				<div class="col-md-2 col-md-offset-7">
+					<h1><a href="join.html" class="join-text" class="active">Join us!</a></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2 list-position-control">
+					<ul class="sections">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="docs.html">Docs</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="resources.html">Resources</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="content_container">
-			<h1 id="title">Join Us!</h1>
-			<fieldset>
-				<legend>Personal information:</legend>
-				<form id="invite_request" action="/join" method="post">
-					Email:<br>
-				<input type="text" name="email"/>
-				<br><br>
-					Country:<br><br>
-					Programming languages you are interested in:</br>
-					(Separate each language name with a hyphen)<br>
-				<textarea name="p_langs" cols="30" rows="3"></textarea><br><br>
-				<input type="button" value="Request invite" onClick="submit_info()">
-				</form>
-			</fieldset>
-		</div>
 
+		<div class="container">
+			<div class="row">
+				<h1 id="title">Join Us!</h1>
+			</div>
+			<div class="row">
+				<div class="form-container">
+					<fieldset>
+						<legend>Personal Information:</legend>
+						<form id="invite_request" action="/join" method="post">
+							<div class="row email-control">
+								<div class="col-md-4">
+									<p class="text-right">Email:</p>
+								</div>
+								<div class="col-md-3">
+									<input type="text" name="email" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="text-right">Programming languages youare interested in:</br>
+									<span class="little-join-text">(Separate each language name with a hyphen)</span></p>
+								</div>
+								<div class="col-md-3">
+									<textarea name="p_langs" cols="30" rows="3"></textarea><br><br>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-5">
+									<input type="button" value="Request Invite" onClick="submit_info()" class="btn btn-primary"/>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+				</div>
+			</div>
+		</div>
 		<script src="js/main.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
@@ -67,5 +80,5 @@
 			}
 		</script>
 	</div>
-</body>
+	</body>
 </html>
