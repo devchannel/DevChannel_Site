@@ -3,10 +3,8 @@ import time
 
 import requests
 
-from apps import join_config
+from apps import invite_config
 
-def swag():
-    return 'hi'
 
 def send_invite(email, p_langs):
     response = requests.post(join_config.SLACK_INV_URL,
