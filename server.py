@@ -37,9 +37,16 @@ def join():
         email = flask.request.form['email']
         p_langs = flask.request.form['p_langs']
 
-        return invite.send_invite(email, p_langs)
+        # redir: -1, 0 or 1
+        # -1: stay on page;    0: redirect to index.html;    1: redirect to slack
+        if email == '' or p_langs == '':
+            redir, resp = -1, 'Please fill every field!'
+        else:
+            redir, resp = invite.send_invite(email, p_langs)
+
+        return flask.render_template('join.html', status=redir, error=resp)
     else:
-        return flask.render_template('join.html')
+        return flask.render_template('join.html', status=None, error=None)
 
 if __name__ == '__main__':
     app.run()

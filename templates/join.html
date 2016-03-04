@@ -8,8 +8,30 @@
 		<!--<script src="static/js/sw-register.js"></script>-->
 		<link href="static/css/bootstrap.css" rel="stylesheet">
 		<link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
+        <link href="static/css/placeholder_name.css" type="text/css" rel="stylesheet">
+        <script src="static/js/main.js"></script>
+		<script src="static/js/jquery.js"></script>
+		<script src="static/js/bootstrap.js"></script>
 	</head>
 	<body>
+		{% if status == -1 %}
+            <div class="error">{{ error }}</div>
+		{% elif status == 0 %}
+            <div class="notification">{{ error }}</div>
+            <script>
+            setTimeout(function (){
+                window.location.replace("/index");
+            }, 3000);
+            </script>
+		{%elif status == 1 %}
+            <div class="notification">{{ error }}</div>
+            <script>
+            setTimeout(function (){
+                window.location.replace("http://devchannel.slack.com");
+            }, 3000);
+            </script>
+		{% endif %}
+
 		<div class="row navthingy">
 			<div class="row">
 				<div class="col-md-1 dev-logo">
@@ -62,7 +84,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-2 col-md-offset-5">
-									<input type="button" value="Request Invite" onClick="submit_info()" class="btn btn-primary" id="join-btn"/>
+									<input type="submit" value="Request Invite" class="btn btn-primary" id="join-btn"/>
 								</div>
 							</div>
 						</form>
@@ -70,15 +92,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="static/js/main.js"></script>
-		<script src="static/js/jquery.js"></script>
-		<script src="static/js/bootstrap.js"></script>
-		<script>
-			function submit_info(){
-				console.log('Submitted');
-			    document.getElementById("invite_request").submit();
-			}
-		</script>
-	</div>
 	</body>
 </html>
