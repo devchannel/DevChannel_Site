@@ -1,0 +1,7 @@
+/* only "join.html" references it currently */
+.error{
+    background-color: yellow;
+}
+.notification{
+    background-color: green;
+}
