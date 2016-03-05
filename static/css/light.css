@@ -1,3 +1,4 @@
+/* Main Stuff */
 html {
   font-family: Lucida, sans-serif;
 }
@@ -13,9 +14,21 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color: white !important;
 }
 
+.container {
+  max-width: 55em;
+  margin-top: 7.3em;
+  padding: 3em;
+}
+
+.active {
+  border-bottom: 6px solid #1AADFF;
+  color: white !important;
+}
+
+/* Main Nav */
 .navthingy {
   background: #072B40;
 }
@@ -45,11 +58,13 @@ a:hover {
   margin-bottom: -5px;
 }
 
-.sections ul {
+.sections ul,
+.sidebar-nav ul {
   list-style-type: none;
 }
 
-.sections li {
+.sections li,
+.sidebar-nav li {
   display: inline;
   color: #E1E1E1;
   font-size: 1.25em;
@@ -61,22 +76,72 @@ a:hover {
   border-bottom: 6px solid rgba(26, 173, 255, .25);
 }
 
-.active {
-  border-bottom: 6px solid #1AADFF;
-  color: white !important;
+/* Mobile "Sidebar" Nav */
+#sidebar-wrapper {
+  padding-top: 5em;
+  margin-left: -3em;
+  z-index: 1;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow-y: hidden;
+  background: #072B40;
+  opacity: 0.9;
 }
 
-.container {
-  max-width: 55em;
-  margin-top: 7.3em;
+/* Content */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
 }
 
+/* Displaying the menu */
+#wrapper.menuDisplayed #sidebar-wrapper {
+  width: 30%;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper {
+  padding-left: 20%;
+}
+
+
+.sidebar-nav li a {
+  display: block;
+  text-align: center;
+}
+
+.sidebar-nav a:hover {
+  border-bottom: 6px solid rgba(26, 173, 255, .25);
+  margin-bottom: -6px;
+}
+
+.sidebar-nav .active:hover {
+  margin-bottom: 0 !important;
+}
+
+#join {
+  color: white;
+  font-weight: bold;
+}
+
+.ham-icon {
+  border: 0;
+  font-size: 2.5em;
+  margin: 10px;
+  background: none !important;
+  color: #E1E1E1 !important;
+}
+
+.ham-icon:hover {
+  color: white;
+}
+
+/* Index / Main */
 #title {
   color: #072B40;
   font-size: 2em;
 }
 
-/* Index / Main */
 .announcement_container,
 .form-container {
   background-color: white;
