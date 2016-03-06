@@ -108,6 +108,7 @@ a:hover {
 /* Displaying the menu */
 #wrapper.menuDisplayed #sidebar-wrapper{
   width: 50%;
+  position: fixed;
 }
 
 #wrapper.menuDisplayed #page-content-wrapper {
