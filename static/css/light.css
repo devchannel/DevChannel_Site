@@ -12,10 +12,6 @@ a {
   color: inherit;
 }
 
-.link{
-    text-decoration: underline;
-}
-
 a:hover {
   text-decoration: none;
   color: white !important;
@@ -180,8 +176,7 @@ a:hover {
   font-size: 1.2em;
 }
 
-textarea {
-  width: 18em;
+.form-container textarea {
   margin-left: -12px;
 }
 
@@ -229,4 +224,14 @@ textarea {
 
 #join-btn:hover {
   background: #1AD5FF;
+}
+
+/* About */
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+  color: #1AADFF !important;
+  text-decoration: underline;
 }
