@@ -172,6 +172,23 @@ a:hover {
   box-shadow: rgba(0,0,0,0.8) 0 0 0.2em;
 }
 
+.field {
+  display: inline;
+}
+
+.form-container label {
+  font-size: 1.2em;
+}
+
+textarea {
+  width: 18em;
+  margin-left: -12px;
+}
+
+.prog-label {
+  margin-left: -12px;
+}
+
 .posters_name {
     padding: 10px 0 0 10px;
     background: #072B40;

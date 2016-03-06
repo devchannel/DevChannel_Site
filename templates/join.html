@@ -97,18 +97,14 @@
 								<fieldset>
 									<legend>Personal Information:</legend>
 									<form id="invite_request" action="/join" method="post">
-										<div class="row email-control">
-											<div class="col-md-4">
-												<p class="text-right">Email:</p>
-											</div>
-											<div class="col-md-3">
-												<input type="text" name="email" />
-											</div>
+										<div class="row email-control field">
+											<label for="email">Email</label>
+											<input type="text" name="email" />
 										</div>
-										<div class="row">
+										<div class="row field">
 											<div class="col-md-4">
-												<p class="text-right">Programming languages youare interested in:</br>
-												<span class="little-join-text">(Separate each language name with a hyphen)</span></p>
+												<label for="p_langs" class="prog-label text-right">Programming languages you are interested in:</br>
+												<span class="little-join-text">(Separate each language name with a hyphen)</span></label>
 											</div>
 											<div class="col-md-3">
 												<textarea name="p_langs" cols="30" rows="3"></textarea><br><br>
