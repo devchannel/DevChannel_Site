@@ -32,67 +32,102 @@
             </script>
 		{% endif %}
 
-			  <div class = "navbar-fixed-top">
-				<div class="row navthingy">
-					<div class="row">
-						<div class="col-md-1 dev-logo">
-							<a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
-						</div>
-						<div class="col-md-1">
-							<h2 class="text-logo">DevChannel</h2>
-						</div>
-						<div class="col-md-2 col-md-offset-7">
-							<h1><a href="join" class="join-text" class="active">Join us!</a></h1>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-md-offset-2 list-position-control">
-							<ul class="sections">
-								<li><a href="index">Home</a></li>
-								<li><a href="docs">Docs</a></li>
-								<li><a href="about">About</a></li>
-								<li><a href="resources">Resources</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			  </div>
 
-		<div class="container">
-			<div class="row">
-				<h1 id="title">Join Us!</h1>
-			</div>
-			<div class="row">
-				<div class="form-container">
-					<fieldset>
-						<legend>Personal Information:</legend>
-						<form id="invite_request" action="/join" method="post">
-							<div class="row email-control">
-								<div class="col-md-4">
-									<p class="text-right">Email:</p>
+			<div id="wrapper">
+
+				<div id="sidebar-wrapper">
+	        <ul class="sidebar-nav">
+	          <li><a href="index">Home</a></li>
+	          <li><a href="docs">Docs</a></li>
+	          <li><a href="about">About</a></li>
+	          <li><a href="resources">Resources</a></li>
+	          <li><a href="join" id="join" class="active">Join Us!</a></li>
+	        </ul>
+	      </div>
+
+				<div id="page-content-wrapper">
+
+					<div class = "navbar-fixed-top">
+						<div class="row navthingy">
+							<div class="row">
+								<div class="col-md-1 dev-logo">
+									<a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
 								</div>
-								<div class="col-md-3">
-									<input type="text" name="email" />
+								<div class="col-md-1">
+									<h2 class="text-logo">DevChannel</h2>
+								</div>
+								<div class="col-md-2 col-md-offset-7">
+									<h1><a href="join" class="join-text" class="active">Join us!</a></h1>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-4">
-									<p class="text-right">Programming languages youare interested in:</br>
-									<span class="little-join-text">(Separate each language name with a hyphen)</span></p>
-								</div>
-								<div class="col-md-3">
-									<textarea name="p_langs" cols="30" rows="3"></textarea><br><br>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-2 col-md-offset-5">
-									<input type="submit" value="Request Invite" class="btn btn-primary" id="join-btn"/>
+								<div class="col-md-4 col-md-offset-2 list-position-control">
+									<ul class="sections">
+										<li><a href="index">Home</a></li>
+										<li><a href="docs">Docs</a></li>
+										<li><a href="about">About</a></li>
+										<li><a href="resources">Resources</a></li>
+									</ul>
 								</div>
 							</div>
-						</form>
-					</fieldset>
+						</div>
+				  </div>
+
+					<nav class="navbar navthingy navbar-fixed-top navbar-default hidden-lg hidden-md">
+	          <div class="container-fluid">
+	            <div class="navbar-header">
+	              <div class="row">
+	                <div class="col-sm-2">
+	                  <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
+	                </div>
+	                <div class="col-sm-2">
+	                  <a href="index" class="pull-left"><img src="../static/files/images/DevChannelTeamLogo_64.png" class="img-rounded"/></a>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </nav>
+
+					<div class="container">
+						<div class="row">
+							<h1 id="title">Join Us!</h1>
+						</div>
+						<div class="row">
+							<div class="form-container">
+								<fieldset>
+									<legend>Personal Information:</legend>
+									<form id="invite_request" action="/join" method="post">
+										<div class="row email-control">
+											<div class="col-md-4">
+												<p class="text-right">Email:</p>
+											</div>
+											<div class="col-md-3">
+												<input type="text" name="email" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<p class="text-right">Programming languages youare interested in:</br>
+												<span class="little-join-text">(Separate each language name with a hyphen)</span></p>
+											</div>
+											<div class="col-md-3">
+												<textarea name="p_langs" cols="30" rows="3"></textarea><br><br>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2 col-md-offset-5">
+												<input type="submit" value="Request Invite" class="btn btn-primary" id="join-btn"/>
+											</div>
+										</div>
+									</form>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+
 				</div>
+
 			</div>
-		</div>
+
 	</body>
 </html>
