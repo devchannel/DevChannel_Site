@@ -12,15 +12,29 @@ a {
   color: inherit;
 }
 
+.link{
+    text-decoration: underline;
+}
+
 a:hover {
   text-decoration: none;
   color: white !important;
 }
 
-.container {
-  max-width: 55em;
-  margin-top: 7.3em;
-  padding: 3em;
+@media (min-width: 970px){
+    .container {
+      margin-top: 7.3em;
+      max-width: 55em;
+      padding: 3em;
+    }
+}
+
+@media (max-width: 970px){
+    .container{
+        margin-top: 3.5em;
+        max-width: 55em;
+        padding: 3em;
+    }
 }
 
 .active {
@@ -96,12 +110,12 @@ a:hover {
 }
 
 /* Displaying the menu */
-#wrapper.menuDisplayed #sidebar-wrapper {
-  width: 30%;
+#wrapper.menuDisplayed #sidebar-wrapper{
+  width: 50%;
 }
 
 #wrapper.menuDisplayed #page-content-wrapper {
-  padding-left: 20%;
+  /*padding-left: 20%;*/
 }
 
 
