@@ -7,6 +7,7 @@ from apps import invite_config
 
 
 def send_invite(email, p_langs):
+    print('ok 1')
     response = requests.post(invite_config.SLACK_INV_URL,
                              params={
                                  'token': invite_config.TOKEN,
