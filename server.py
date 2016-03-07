@@ -38,6 +38,8 @@ def join():
 
         email = flask.request.form['email']
         p_langs = flask.request.form['p_langs']
+        #email = 'test'
+        #p_langs = 'test'
 
         print(email, p_langs)
 
