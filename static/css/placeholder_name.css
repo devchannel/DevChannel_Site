@@ -1,13 +1,9 @@
 /* only "join.html" references it currently */
 .error{
-    margin-top: 12em;
     background-color: yellow;
     color: black;
-    z-index: -1;
 }
 .notification{
-    margin-top: 9em;
     background-color: blue;
     color: white;
-    z-index: -1; position: relative
 }

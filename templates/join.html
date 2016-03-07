@@ -15,25 +15,6 @@
         <script src="static/js/bootstrap.js"></script>
     </head>
     <body>
-        {% if status == -1 %}
-            <div class="error">{{ rep_error }}</div>
-        {% elif status == 0 %}
-            <div class="notification">{{ rep_error }}</div>
-            <script>
-            setTimeout(function (){
-                window.location.replace("/index");
-            }, 6000);
-            </script>
-        {% elif status == 1 %}
-            <div class="notification">{{ rep_error }}</div>
-            <script>
-            setTimeout(function (){
-                window.location.replace("http://devchannel.slack.com");
-            }, 6000);
-            </script>
-        {% endif %}
-
-
             <div id="wrapper">
 
                 <div id="sidebar-wrapper">
@@ -90,6 +71,24 @@
                     </nav>
 
                     <div class="container">
+                        {% if status == -1 %}
+                            <div class="error">{{ rep_error }}</div>
+                        {% elif status == 0 %}
+                            <div class="notification">{{ rep_error }}</div>
+                            <script>
+                            setTimeout(function (){
+                                window.location.replace("/index");
+                            }, 6000);
+                            </script>
+                        {% elif status == 1 %}
+                            <div class="notification">{{ rep_error }}</div>
+                            <script>
+                            setTimeout(function (){
+                                window.location.replace("http://devchannel.slack.com");
+                            }, 6000);
+                            </script>
+                        {% endif %}
+
                         <div class="row">
                             <h1 id="title">Join Us!</h1>
                         </div>
