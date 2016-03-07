@@ -3,10 +3,11 @@
     margin-top: 12em;
     background-color: yellow;
     color: black;
+    z-index: -1;
 }
 .notification{
-    position: fixed;
-    margin-top: 12em;
-    background-color: green;
+    margin-top: 9em;
+    background-color: blue;
     color: white;
+    z-index: -1; position: relative
 }

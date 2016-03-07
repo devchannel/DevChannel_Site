@@ -48,4 +48,4 @@ def join():
         return flask.render_template('join.html', status=None, rep_error=None)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=3000, debug=True)
