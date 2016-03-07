@@ -8,6 +8,7 @@
 		<!--<script src="static/js/sw-register.js"></script>-->
 		<link href="static/css/bootstrap.css" rel="stylesheet">
 		<link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
+		<link href="static/css/placeholder_name.css" id="style" type="text/css" rel="stylesheet">
     <link href="static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <script src="static/js/main.js"></script>
 		<script src="static/js/jquery.js"></script>
@@ -15,16 +16,16 @@
 	</head>
 	<body>
 		{% if status == -1 %}
-            <div class="error">{{ error }}</div>
+            <div class="error">{{ rep_error }}</div>
 		{% elif status == 0 %}
-            <div class="notification">{{ error }}</div>
+            <div class="notification">{{ rep_error }}</div>
             <script>
             setTimeout(function (){
                 window.location.replace("/index");
             }, 6000);
             </script>
 		{%elif status == 1 %}
-            <div class="notification">{{ error }}</div>
+            <div class="notification">{{ rep_error }}</div>
             <script>
             setTimeout(function (){
                 window.location.replace("http://devchannel.slack.com");

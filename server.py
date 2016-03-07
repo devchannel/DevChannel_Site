@@ -43,9 +43,9 @@ def join():
         else:
             redir, resp = invite.send_invite(email, p_langs)
 
-        return flask.render_template('join.html', status=redir, error=resp)
+        return flask.render_template('join.html', status=redir, rep_error=resp)
     else:
-        return flask.render_template('join.html', status=None, error=None)
+        return flask.render_template('join.html', status=None, rep_error=None)
 
 if __name__ == '__main__':
     app.run()
