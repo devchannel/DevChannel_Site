@@ -1,142 +1,142 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>DevChannel</title>
-		<!--<script src="static/js/sw-register.js"></script>-->
-		<link href="static/css/bootstrap.css" rel="stylesheet">
-		<link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
-		<link href="static/css/placeholder_name.css" type="text/css" rel="stylesheet">
-    <link href="static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <script src="static/js/main.js"></script>
-		<script src="static/js/jquery.js"></script>
-		<script src="static/js/bootstrap.js"></script>
-	</head>
-	<body>
-		{% if status == -1 %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevChannel</title>
+        <!--<script src="static/js/sw-register.js"></script>-->
+        <link href="static/css/bootstrap.css" rel="stylesheet">
+        <link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
+        <link href="static/css/placeholder_name.css" id="style" type="text/css" rel="stylesheet">
+        <link href="static/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+        <script src="static/js/main.js"></script>
+        <script src="static/js/jquery.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+    </head>
+    <body>
             <div class="error">{{ rep_error }}</div>
-		{% elif status == 0 %}
+        {% elif status == 0 %}
             <div class="notification">{{ rep_error }}</div>
             <script>
             setTimeout(function (){
                 window.location.replace("/index");
             }, 6000);
             </script>
-		{%elif status == 1 %}
+        {%elif status == 1 %}
             <div class="notification">{{ rep_error }}</div>
             <script>
             setTimeout(function (){
                 window.location.replace("http://devchannel.slack.com");
             }, 6000);
             </script>
-		{% endif %}
+        {% endif %}
 
 
-			<div id="wrapper">
+            <div id="wrapper">
 
-				<div id="sidebar-wrapper">
-	        <ul class="sidebar-nav">
-	          <li><a href="index">Home</a></li>
-	          <li><a href="docs">Docs</a></li>
-	          <li><a href="about">About</a></li>
-	          <li><a href="resources">Resources</a></li>
-	          <li><a href="join" id="join" class="active">Join Us!</a></li>
-	        </ul>
-	      </div>
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                      <li><a href="index">Home</a></li>
+                      <li><a href="docs">Docs</a></li>
+                      <li><a href="about">About</a></li>
+                      <li><a href="resources">Resources</a></li>
+                      <li><a href="join" id="join" class="active">Join Us!</a></li>
+                    </ul>
+                </div>
 
-				<div id="page-content-wrapper">
+                <div id="page-content-wrapper">
 
-					<div class = "navbar-fixed-top hidden-sm hidden-xs">
-						<div class="row navthingy">
-							<div class="row">
-								<div class="col-md-1 dev-logo">
-									<a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
-								</div>
-								<div class="col-md-1">
-									<h2 class="text-logo">DevChannel</h2>
-								</div>
-								<div class="col-md-2 col-md-offset-7">
-									<h1><a href="join" class="join-text" class="active">Join us!</a></h1>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 col-md-offset-2 list-position-control">
-									<ul class="sections">
-										<li><a href="index">Home</a></li>
-										<li><a href="docs">Docs</a></li>
-										<li><a href="about">About</a></li>
-										<li><a href="resources">Resources</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-				  </div>
+                    <div class = "navbar-fixed-top hidden-sm hidden-xs">
+                        <div class="row navthingy">
+                            <div class="row">
+                                <div class="col-md-1 dev-logo">
+                                    <a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
+                                </div>
+                                <div class="col-md-1">
+                                    <h2 class="text-logo">DevChannel</h2>
+                                </div>
+                                <div class="col-md-2 col-md-offset-7">
+                                    <h1><a href="join" class="join-text" class="active">Join us!</a></h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-2 list-position-control">
+                                    <ul class="sections">
+                                        <li><a href="index">Home</a></li>
+                                        <li><a href="docs">Docs</a></li>
+                                        <li><a href="about">About</a></li>
+                                        <li><a href="resources">Resources</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-					<nav class="navbar navthingy navbar-fixed-top navbar-default hidden-lg hidden-md">
-	          <div class="container-fluid">
-	            <div class="navbar-header">
-	              <div class="row">
-	                <div class="col-sm-2">
-	                  <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
-	                </div>
-	                <div class="col-sm-2">
-	                  <a href="index" class="pull-left"><img src="../static/files/images/DevChannelTeamLogo_64.png" class="img-rounded"/></a>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </nav>
+                    <nav class="navbar navthingy navbar-fixed-top navbar-default hidden-lg hidden-md">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href="index" class="pull-left"><img src="../static/files/images/DevChannelTeamLogo_64.png" class="img-rounded"/></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
 
-					<div class="container">
-						<div class="row">
-							<h1 id="title">Join Us!</h1>
-						</div>
-						<div class="row">
-							<div class="form-container">
-								<fieldset>
-									<legend>Personal Information:</legend>
-									<form id="invite_request" action="/join" method="post">
-										<div class="row email-control field">
-											<div class="col-md-4">
-												<label for="email" class="email-label">Email</label>
-											</div>
-											<div id="col-md-3">
-												<input type="text" name="email" />
-											</div>
-										</div>
-										<div class="row field">
-											<div class="col-md-4">
-												<label for="p_langs" class="prog-label text-right">Programming languages you are interested in:</br>
-												<span class="little-join-text">(Separate each language name with a hyphen)</span></label>
-											</div>
-											<div class="col-md-3">
-												<textarea name="p_langs" cols="26" rows="3"></textarea><br><br>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-2 col-md-offset-5">
-												<input type="submit" value="Request Invite" class="btn btn-primary" id="join-btn"/>
-											</div>
-										</div>
-									</form>
-								</fieldset>
-							</div>
-						</div>
-					</div>
+                    <div class="container">
+                        <div class="row">
+                            <h1 id="title">Join Us!</h1>
+                        </div>
+                        <div class="row">
+                            <div class="form-container">
+                                <fieldset>
+                                    <legend>Personal Information:</legend>
+                                    <form id="invite_request" action="/join" method="post">
+                                        <div class="row email-control field">
+                                            <div class="col-md-4">
+                                                <label for="email" class="email-label">Email</label>
+                                            </div>
+                                            <div id="col-md-3">
+                                                <input type="text" name="email" />
+                                            </div>
+                                        </div>
+                                        <div class="row field">
+                                            <div class="col-md-4">
+                                                <label for="p_langs" class="prog-label text-right">Programming languages you are interested in:<br>
+                                                <span class="little-join-text">(Separate each language name with a hyphen)</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <textarea name="p_langs" cols="26" rows="3"></textarea><br><br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2 col-md-offset-5">
+                                                <input type="submit" value="Request Invite" class="btn btn-primary" id="join-btn"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
 
-				</div>
+                </div>
 
-			</div>
+            </div>
 
-			<!-- Nav toggle script -->
-	    <script>
-	      $("#menu-toggle").click( function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("menuDisplayed");
-	      });
-	    </script>
+            <!-- Nav toggle script -->
+        <script>
+          $("#menu-toggle").click( function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed");
+          });
+        </script>
 
-	</body>
+    </body>
 </html>
