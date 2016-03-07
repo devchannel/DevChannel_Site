@@ -4,6 +4,7 @@ from apps import invite
 
 app = flask.Flask(__name__)
 
+
 @app.route('/')
 def index():
     return flask.render_template('index.html')
@@ -48,4 +49,4 @@ def join():
         return flask.render_template('join.html', status=None, rep_error=None)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=3000)
