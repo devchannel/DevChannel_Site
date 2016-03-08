@@ -34,14 +34,8 @@ def resources():
 @app.route('/join', methods=['GET', 'POST'])
 def join():
     if flask.request.method == 'POST':
-        print('.........')
-
         email = flask.request.form['email']
         p_langs = flask.request.form['p_langs']
-        #email = 'test'
-        #p_langs = 'test'
-
-        print(email, p_langs)
 
         # redir: -1, 0 or 1
         # -1: stay on page;    0: redirect to index.html;    1: redirect to slack
@@ -55,4 +49,4 @@ def join():
         return flask.render_template('join.html', status=None, rep_error=None)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=3000, threaded=True)
