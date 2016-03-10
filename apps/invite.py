@@ -30,6 +30,7 @@ lang_channels ={
     'java': invite_config.CH_JAVA,
 
     'unity': invite_config.CH_GAMEDEV,
+    'unityscript': invite_config.CH_GAMEDEV,
     'unity3d': invite_config.CH_GAMEDEV,
     'ue': invite_config.CH_GAMEDEV,
     'ue3': invite_config.CH_GAMEDEV,
