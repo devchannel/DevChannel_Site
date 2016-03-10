@@ -5,12 +5,51 @@ import requests
 
 from apps import invite_config
 
+lang_channels ={
+    'python': invite_config.CH_PYTHON,
+    'python2': invite_config.CH_PYTHON,
+    'python3':invite_config.CH_PYTHON,
+
+    'cpp': invite_config.CH_CPP,
+    'c++': invite_config.CH_CPP,
+
+    'csharp': invite_config.CH_C_SHARP,
+    'c#': invite_config.CH_C_SHARP,
+
+    'ruby': invite_config.CH_RUBY,
+    'ror': invite_config.CH_RUBY,
+
+    'swift': invite_config.CH_SWIFT,
+
+    'html': invite_config.CH_WEB, # not even a real language plz...
+    'css': invite_config.CH_WEB,
+    'javascript': invite_config.CH_WEB,
+    'js': invite_config.CH_WEB,
+    'jquery': invite_config.CH_WEB,
+
+    'java': invite_config.CH_JAVA,
+
+    'unity': invite_config.CH_GAMEDEV,
+    'unity3d': invite_config.CH_GAMEDEV,
+    'ue': invite_config.CH_GAMEDEV,
+    'ue3': invite_config.CH_GAMEDEV,
+    'unrealengine': invite_config.CH_GAMEDEV
+}
+
 
 def send_invite(email, p_langs):
+    # remove all whitespace hack, then lowercase and split by ,
+    languages = ''.join(p_langs.split()).lower().split(',')
+
+    join_these = ''
+    for lang in languages:
+        if lang in lang_channels:
+            join_these += lang_channels[lang] + ','
+
     response = requests.post(invite_config.SLACK_INV_URL,
                              params={
                                  'token': invite_config.TOKEN,
-                                 'channels': invite_config.AUTO_JOIN_CHANNELS,
+                                 'channels': join_these + invite_config.AUTO_JOIN_CHANNELS,
                                  't': round(time.time()),
                                  'email': email,
                                  'first_name': '',
@@ -28,7 +67,8 @@ def send_invite(email, p_langs):
                       'You will be redirected to devchannel.slack.com'
 
         elif err == 'already_invited':
-            return -1, "It looks like you have already been invited, please look in your mail box (and your spam box too) for an invite.<br>" \
+            return -1, "It looks like you have already been invited, please look in your mail box (and your spam box " \
+                       "too) for an invite.<br>" \
                        "If you can't find it, please contact me on:<br>" \
                        "Reddit: therightman_<br>" \
                        "Twitter: @therightmandev"
