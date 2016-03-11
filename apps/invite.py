@@ -78,5 +78,5 @@ def send_invite(email, p_langs):
 
     elif dict_data['ok']:
         with open("user_info.log", "a") as myfile:
-                myfile.write(email + "-" + p_langs + "<br>")
+                myfile.write(email + "-" + p_langs + "\n")
         return 0, 'Check your mail box :)'
