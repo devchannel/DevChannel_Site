@@ -28,6 +28,8 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 
+# bytecode cache
+__pycache__/
 apps/__pycache__
 
 #netbeans files

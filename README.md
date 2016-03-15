@@ -5,6 +5,7 @@ A super secret repo for the DevChannel website
 Requirements:
   1. Python 3
   2. Flask (`pip3 install flask`)
+  3. Requests (`pip3 install requests`)
 
 Run `server.py` (`python3 server.py`). After that you can open the site:
   1. If you are on the host computer:  
