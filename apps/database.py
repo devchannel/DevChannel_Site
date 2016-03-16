@@ -7,7 +7,7 @@ User = Query()
 def insert_user(langs='', email='', git='', timezone='', username=''):
     if username == '':
         username = email
-    data = {"!skills": langs, "!github": git, "!time": timezone, "name": username}
+    data = {"skills": langs, "github": git, "time": timezone, "name": username}
     db.insert(data)
     return 'added: {}'.format(data)
 

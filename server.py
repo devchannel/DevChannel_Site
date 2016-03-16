@@ -54,7 +54,7 @@ def _database():
     langs = flask.request.args.get('langs', '')
     email = flask.request.args.get('email', '')
     username = flask.request.args.get('username', '')
-    git = flask.request.args.get('!github', '')
+    git = flask.request.args.get('git', '')
     timezone = flask.request.args.get('timezone', '')
 
     if flask.request.method == 'POST':
@@ -63,11 +63,11 @@ def _database():
     elif flask.request.method == 'PUT':
         params = {}
         if langs != '':
-            params['!skills'] = langs
+            params['skills'] = langs
         if git != '':
-            params['!github'] = git
+            params['github'] = git
         if timezone != '':
-            params['!time'] = timezone
+            params['time'] = timezone
         return database.update_user(email=email, username=username, params=params)
 
     elif flask.request.method == 'GET':
