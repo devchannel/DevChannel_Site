@@ -68,6 +68,8 @@ def _database():
             params['github'] = git
         if timezone != '':
             params['time'] = timezone
+        if username != '' and email != '':
+            params['name'] = username
         return database.update_user(email=email, username=username, params=params)
 
     elif flask.request.method == 'GET':
