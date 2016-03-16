@@ -25,6 +25,10 @@ def get_user(email='', username=''):
     return str(db.get(User.name == username)) or 'User not found'
 
 
+def get_all_users():
+    return db.all()
+
+
 def delete_user(email='', username=''):
     if username == '':
         username = email
