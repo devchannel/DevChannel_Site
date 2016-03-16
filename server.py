@@ -11,14 +11,9 @@ app.secret_key = server_config.SERVER_SECRET
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     return flask.render_template('index.html')
-
-
-@app.route('/index')
-def dummy_index():
-    # TODO: fix this shit later
-    return index()
 
 
 @app.route('/docs')

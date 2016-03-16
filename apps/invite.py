@@ -18,7 +18,7 @@ lang_channels ={
 
     'haskell': invite_config.CH_HASKELL,
 
-    'go': invite_config.CH_GO
+    'go': invite_config.CH_GO,
 
     'ruby': invite_config.CH_RUBY,
     'ror': invite_config.CH_RUBY,
