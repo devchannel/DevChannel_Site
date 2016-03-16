@@ -1,5 +1,6 @@
 import flask
 
+import server_config
 from apps import invite, database
 
 app = flask.Flask(__name__)
@@ -51,6 +52,9 @@ def join():
 
 @app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def _database():
+    if flask.session.get('username') not in server_config.ALLOWED_USERS:
+        return 'Unauthorized'
+
     langs = flask.request.args.get('langs', '')
     email = flask.request.args.get('email', '')
     username = flask.request.args.get('username', '')
