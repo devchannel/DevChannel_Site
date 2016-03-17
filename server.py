@@ -85,7 +85,7 @@ def _database():
         return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
 
     elif flask.request.method == 'GET':
-        if req_all == '':
+        if req_all == 'true':
             return database.get_all_users()
         return database.get_user(email=email, username=username, slack_id=slack_id)
 
