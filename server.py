@@ -78,6 +78,10 @@ def _database():
             params['time'] = timezone
         if username != '' and email != '':
             params['name'] = username
+        if slack_id != '':
+            params['slack_id'] = slack_id
+        if email != '':
+            params['email'] = email
         return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
 
     elif flask.request.method == 'GET':
