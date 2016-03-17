@@ -1,172 +1,91 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevChannel</title>
-        <!--<script src="static/js/sw-register.js"></script>-->
-        <link href="static/css/bootstrap.css" rel="stylesheet">
-    <link href="static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="static/js/jquery.js"></script>
-    <script src="static/js/bootstrap.js"></script>
-    </head>
-    <body>
+{% extends "layout.html" %}
+{% set activepage = "about" %}
+{% block title %}About{% endblock %}
 
-        <div id="wrapper">
-
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li><a href="index" class="active">Home</a></li>
-                    <li><a href="docs">Docs</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="resources">Resources</a></li>
-                    <li><a href="join" id="join">Join Us!</a></li>
-                </ul>
+{% block content %}
+    <div class="row">
+        <h1 id="title">About DevChannel</h1>
+    </div>
+    <div class="row">
+        <div class="announcement_container">
+            <div class="row posters_name">
+                <h4>What is DevChannel?</h4>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                     <p class="announcement">The main goals of the community are to:</p>
+                     <ul>
+                        <li>Show the path to beginner programmers who need or want help;</li>
+                        <li>Make projects with others, from the simplest calculator to the most innovative creations;</li>
+                        <li>Share ideas;</li>
+                        <li>Help each other and learn together!</li>
+                     </ul>
 
-            <div id="page-content-wrapper">
+                        <p class="announcement">We are all part of a Slack team (Slack is a platform for team communication) and talk there with each other.<br><br>
 
-                <div class = "navbar-fixed-top hidden-xs hidden-sm">
-                    <div class="row navthingy">
-                        <div class="row">
-                            <div class="col-md-1 dev-logo">
-                                <a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo"/></a>
-                            </div>
-                            <div class="col-md-1">
-                                <h2 class="text-logo">DevChannel</h2>
-                            </div>
-                            <div class="col-md-2 col-md-offset-7">
-                                <h1><a href="join" class="join-text">Join us!</a></h1>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-2 list-position-control">
-                                <ul class="sections">
-                                    <li><a href="index">Home</a></li>
-                                    <li><a href="docs">Docs</a></li>
-                                    <li><a href="about" class="active">About</a></li>
-                                    <li><a href="resources">Resources</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        Some of the things you'll find in DevChannel:</p> <!-- When you type it as DevChannel it looks like a term rather than the word Channel, so putting an article in there seems a bit off place, like you wouldn't say I play the counter strike, or I know the C++ etc, when it's a name "the" doesn't sound right, if you insist though then it's not as big of a problem cause after a bit one can quickly realize why the article is there.-->
+
+                     <ul>
+                        <li>Channels about different programming topics!</li>
+                        <li>Other people to make projects with!</li>
+                        <li>Programmers (beginner to advanced) that share knowledge with each other!</li>
+                     </ul>
                 </div>
-
-                <nav class="navbar navthingy navbar-fixed-top navbar-default hidden-lg hidden-md">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
-                                </div>
-                            <div class="col-sm-2">
-                                <a href="index" class="pull-left"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="<D/C>" class="img-rounded"/></a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-
-                <div class="container">
-                    <div class="row">
-                        <h1 id="title">About DevChannel</h1>
-                    </div>
-                    <div class="row">
-                        <div class="announcement_container">
-                            <div class="row posters_name">
-                                <h4>What is DevChannel?</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                     <p class="announcement">The main goals of the community are to:</p>
-                                     <ul>
-                                        <li>Show the path to beginner programmers who need or want help;</li>
-                                        <li>Make projects with others, from the simplest calculator to the most innovative creations;</li>
-                                        <li>Share ideas;</li>
-                                        <li>Help each other and learn together!</li>
-                                     </ul>
-
-                                        <p class="announcement">We are all part of a Slack team (Slack is a platform for team communication) and talk there with each other.<br><br>
-
-                                        Some of the things you'll find in DevChannel:</p> <!-- When you type it as DevChannel it looks like a term rather than the word Channel, so putting an article in there seems a bit off place, like you wouldn't say I play the counter strike, or I know the C++ etc, when it's a name "the" doesn't sound right, if you insist though then it's not as big of a problem cause after a bit one can quickly realize why the article is there.-->
-
-                                     <ul>
-                                        <li>Channels about different programming topics!</li>
-                                        <li>Other people to make projects with!</li>
-                                        <li>Programmers (beginner to advanced) that share knowledge with each other!</li>
-                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="announcement_container">
-                            <div class="row posters_name">
-                                <h4>How we started...</h4>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p class="announcement">Have you ever wanted to program with friends?
-                                         Well, I have, and as a result I posted <a class="link" href="https://redd.it/3mig3t"> a thread on reddit</a> a while back.
-                                         I expected like 1 or 2 replies from some other lonely beginners, but instead I got a lot more and someone suggested that I create a Slack team, which is what I did.
-                                         From a community of about 40 people we started DevChannel, which now has almost 400 members!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="announcement_container">
-                                <div class="row posters_name">
-                                    <h4>The Admins</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="announcement">
-                                            Currently the administrators of the group are:
-                                        </p>
-                                        <ul>
-                                            <li>therightman_</li>
-                                            <li>daruso</li>
-                                            <li>vaggelisd</li>
-                                            <li>himrin</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="announcement_container">
-                                <div class="row posters_name">
-                                    <h4>Contact/Help</h4>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="announcement">
-                                            You can contact me in the following places:
-                                        </p>
-                                        <ul>
-                                            <li>Reddit: <a href="https://www.reddit.com/user/therightman_" style="color:#C90000;">/u/therightman_</a></li>
-                                            <li>Twitter: <a href="https://twitter.com/therightmandev" style="color:#0080FF;">@therightmandev</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </div>
-        <!-- Nav toggle script -->
-    <script>
-      $("#menu-toggle").click( function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("menuDisplayed");
-      });
-    </script>
-
-    </body>
-</html>
+    </div>
+    <div class="row">
+        <div class="announcement_container">
+            <div class="row posters_name">
+                <h4>How we started...</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="announcement">Have you ever wanted to program with friends?
+                         Well, I have, and as a result I posted <a class="link" href="https://redd.it/3mig3t"> a thread on reddit</a> a while back.
+                         I expected like 1 or 2 replies from some other lonely beginners, but instead I got a lot more and someone suggested that I create a Slack team, which is what I did.
+                         From a community of about 40 people we started DevChannel, which now has almost 400 members!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="announcement_container">
+                <div class="row posters_name">
+                    <h4>The Admins</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="announcement">
+                            Currently the administrators of the group are:
+                        </p>
+                        <ul>
+                            <li>therightman_</li>
+                            <li>daruso</li>
+                            <li>vaggelisd</li>
+                            <li>himrin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="announcement_container">
+                <div class="row posters_name">
+                    <h4>Contact/Help</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="announcement">
+                            You can contact me in the following places:
+                        </p>
+                        <ul>
+                            <li>Reddit: <a href="https://www.reddit.com/user/therightman_" style="color:#C90000;">/u/therightman_</a></li>
+                            <li>Twitter: <a href="https://twitter.com/therightmandev" style="color:#0080FF;">@therightmandev</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
