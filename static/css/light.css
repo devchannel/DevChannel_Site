@@ -177,10 +177,6 @@ a:hover {
   font-size: 1.2em;
 }
 
-.form-container textarea {
-  margin-left: -12px;
-}
-
 .prog-label {
   margin-left: -12px;
 }
@@ -211,12 +207,12 @@ a:hover {
   color: #072B40;
 }
 
-.email-control {
-  margin-bottom: 20px;
+.form-container input, .form-container textarea {
+    border-color: #9F9F9F;
 }
 
 .little-join-text {
-  font-size: .75em !important;
+  font-size: .6em !important;
 }
 
 .form-container .btn-primary {
