@@ -58,11 +58,13 @@ def _database():
     langs = flask.request.args.get('langs', '')
     email = flask.request.args.get('email', '')
     username = flask.request.args.get('username', '')
+    slack_id = flask.request.args.get('slack_id', '')
     git = flask.request.args.get('git', '')
     timezone = flask.request.args.get('timezone', '')
 
     if flask.request.method == 'POST':
-        return database.insert_user(langs=langs, email=email, username=username, git=git, timezone=timezone)
+        return database.insert_user(email=email, username=username, slack_id=slack_id,
+                                    langs=langs, git=git, timezone=timezone)
 
     elif flask.request.method == 'PUT':
         params = {}
@@ -74,13 +76,13 @@ def _database():
             params['time'] = timezone
         if username != '' and email != '':
             params['name'] = username
-        return database.update_user(email=email, username=username, params=params)
+        return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
 
     elif flask.request.method == 'GET':
-        return database.get_user(email=email, username=username)
+        return database.get_user(email=email, username=username, slack_id=slack_id)
 
     elif flask.request.method == 'DELETE':
-        return database.delete_user(email=email, username=username)
+        return database.delete_user(email=email, username=username, slack_id=slack_id)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000, threaded=True)
