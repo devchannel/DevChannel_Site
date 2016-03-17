@@ -62,6 +62,8 @@ def _database():
     git = flask.request.args.get('git', '')
     timezone = flask.request.args.get('timezone', '')
 
+    req_all = flask.request.args.get('all', '')
+
     if flask.request.method == 'POST':
         return database.insert_user(email=email, username=username, slack_id=slack_id,
                                     langs=langs, git=git, timezone=timezone)
@@ -79,6 +81,8 @@ def _database():
         return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
 
     elif flask.request.method == 'GET':
+        if req_all == '':
+            return database.get_all_users()
         return database.get_user(email=email, username=username, slack_id=slack_id)
 
     elif flask.request.method == 'DELETE':
