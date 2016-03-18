@@ -1,3 +1,5 @@
+import json
+
 from tinydb import TinyDB, Query
 
 db = TinyDB('database/users.json')
@@ -32,22 +34,22 @@ def insert_user(langs='', git='', timezone='', email='', username='', slack_id='
 
 
 @choose_identifier
-def update_user(params, id_key, id_value):
+def update_user(params, id_key, id_value, **_):
     db.update(params, User[id_key] == id_value)
     return 'updated {} with: {}'.format(id_key, params)
 
 
 @choose_identifier
-def get_user(id_key, id_value):
-    return str(db.get(User[id_key] == id_value)) or 'User not found'
+def get_user(id_key, id_value, **_):
+    return json.dumps(db.get(User[id_key] == id_value)) or 'User not found'
 
 
 def get_all_users():
-    return db.all()
+    return json.dumps(db.all())
 
 
 @choose_identifier
-def delete_user(id_key, id_value):
+def delete_user(id_key, id_value, **_):
     db.remove(User[id_key] == id_value)
     return 'deleted: {}'.format(id_key)
 
