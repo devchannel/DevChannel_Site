@@ -102,7 +102,7 @@ def login():
 
 @app.route('/_callback')
 def auth():
-    session_code = flask.request.args.get('code')
+    session_code = flask.request.args.get('code', '')
 
     if session_code != '':
         resp = requests.post(
