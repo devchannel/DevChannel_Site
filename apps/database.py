@@ -21,7 +21,7 @@ def choose_identifier(original):
         else:
             return 'Please specify email, username or id'
 
-        original(**kwargs)
+        return original(**kwargs)
     return wrapper
 
 
