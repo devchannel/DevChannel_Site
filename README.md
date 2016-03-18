@@ -1,10 +1,14 @@
 # DevChannel_Site
 A super secret repo for the DevChannel website
 
-### Test
-Requirements:
+### Dependencies
   1. Python 3
-  2. Flask (`pip3 install flask`)
+  2. Flask
+  3. Requests
+
+### Installation
+  * If you have conda installed: `conda env create -f environment.yml`.
+  * If you have pip installed: `pip install -r requirements.txt`
 
 Run `server.py` (`python3 server.py`). After that you can open the site:
   1. If you are on the host computer:  

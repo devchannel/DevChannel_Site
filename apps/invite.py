@@ -16,6 +16,10 @@ lang_channels = {
     'csharp': invite_config.CH_C_SHARP,
     'c#': invite_config.CH_C_SHARP,
 
+    'haskell': invite_config.CH_HASKELL,
+
+    'go': invite_config.CH_GO,
+
     'ruby': invite_config.CH_RUBY,
     'ror': invite_config.CH_RUBY,
 

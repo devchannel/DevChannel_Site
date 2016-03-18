@@ -14,7 +14,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: white !important;
+  color: white;
 }
 
 @media (min-width: 970px){
@@ -55,12 +55,27 @@ a:hover {
 }
 
 .join-text {
-  color: #E1E1E1;
-  transition: all 0.2s ease;
+    position: absolute;
+    right: 64px;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin: auto 0;
+    padding: 0 24px;
+    font-size: 2.1em;
+    border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.7);
+    transition: all 0.2s ease;
 }
 
 .join-text:hover {
-  font-size: 110%;
+    background-color: rgba(255,255,255,0.7);
+    border-color: transparent;
+    color: #072B40;
 }
 
 .list-position-control {
@@ -177,10 +192,6 @@ a:hover {
   font-size: 1.2em;
 }
 
-.form-container textarea {
-  margin-left: -12px;
-}
-
 .prog-label {
   margin-left: -12px;
 }
@@ -211,12 +222,12 @@ a:hover {
   color: #072B40;
 }
 
-.email-control {
-  margin-bottom: 20px;
+.form-container input, .form-container textarea {
+    border-color: #9F9F9F;
 }
 
 .little-join-text {
-  font-size: .75em !important;
+  font-size: .6em !important;
 }
 
 .form-container .btn-primary {
