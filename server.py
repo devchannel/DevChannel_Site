@@ -50,7 +50,6 @@ def join():
         return flask.render_template('join.html', status=None, rep_error=None)
 
 
-
 @app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def _database():
     if flask.session.get('username') not in server_config.ALLOWED_USERS:
@@ -63,7 +62,7 @@ def _database():
     git = flask.request.args.get('git', '')
     timezone = flask.request.args.get('timezone', '')
 
-    req_all = flask.request.args.get('all', '')
+    req_all = flask.request.args.get('req_all', '')
 
     if flask.request.method == 'POST':
         return database.insert_user(email=email, username=username, slack_id=slack_id,
@@ -92,6 +91,7 @@ def _database():
 
     elif flask.request.method == 'DELETE':
         return database.delete_user(email=email, username=username, slack_id=slack_id)
+
 
 @app.route('/_login')
 def login():
