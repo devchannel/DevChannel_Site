@@ -9,3 +9,4 @@ dependencies:
 - pip:
   - flask==0.10.1
   - requests==2.9.0
+  - tinydb
