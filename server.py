@@ -36,14 +36,14 @@ def resources():
 def join():
     if flask.request.method == 'POST':
         email = flask.request.form['email']
-        p_langs = flask.request.form['p_langs']
+        skills = flask.request.form['skills']
 
         # redir: -1, 0 or 1
         # -1: stay on page;    0: redirect to index.html;    1: redirect to slack
-        if email == '' or p_langs == '':
+        if email == '' or skills == '':
             redir, resp = -1, 'Please fill every field!'
         else:
-            redir, resp = invite.send_invite(email, p_langs)
+            redir, resp = invite.send_invite(email, skills)
 
         return flask.render_template('join.html', status=redir, rep_error=resp)
     else:
