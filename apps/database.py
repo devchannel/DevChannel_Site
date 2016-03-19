@@ -28,7 +28,7 @@ def choose_identifier(original):
 
 
 def insert_user(langs='', git='', timezone='', email='', username='', slack_id='', points=0):
-    data = {"skills": langs, "github": git, "time": timezone, "email": email, "name": username, 'slack_id': slack_id, "points": points}
+    data = {"skills": langs, "github": git, "time": timezone, "email": email, "username": username, 'slack_id': slack_id, "points": points}
     db.insert(data)
     return 'added: {}'.format(data)
 
