@@ -3,12 +3,12 @@ import time
 
 import requests
 
-from apps import invite_config
+from apps import invite_config, database
 
-lang_channels ={
+lang_channels = {
     'python': invite_config.CH_PYTHON,
     'python2': invite_config.CH_PYTHON,
-    'python3':invite_config.CH_PYTHON,
+    'python3': invite_config.CH_PYTHON,
 
     'cpp': invite_config.CH_CPP,
     'c++': invite_config.CH_CPP,
@@ -25,7 +25,7 @@ lang_channels ={
 
     'swift': invite_config.CH_SWIFT,
 
-    'html': invite_config.CH_WEB, # not even a real language plz...
+    'html': invite_config.CH_WEB,
     'css': invite_config.CH_WEB,
     'javascript': invite_config.CH_WEB,
     'js': invite_config.CH_WEB,
@@ -81,6 +81,5 @@ def send_invite(email, p_langs):
             return -1, dict_data['error']
 
     elif dict_data['ok']:
-        with open("user_info.log", "a") as myfile:
-                myfile.write(email + "-" + p_langs + "\n")
+        database.insert_user(langs=p_langs, email=email)
         return 0, 'Check your mail box :)'

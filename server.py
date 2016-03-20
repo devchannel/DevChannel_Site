@@ -4,7 +4,8 @@ import flask
 import requests
 
 import server_config
-from apps import invite
+
+from apps import invite, database
 
 app = flask.Flask(__name__)
 app.secret_key = server_config.SERVER_SECRET
@@ -49,6 +50,49 @@ def join():
         return flask.render_template('join.html', status=None, rep_error=None)
 
 
+@app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def _database():
+    if flask.session.get('username') not in server_config.ALLOWED_USERS:
+        return 'Unauthorized'
+
+    langs = flask.request.args.get('langs', '')
+    email = flask.request.args.get('email', '')
+    username = flask.request.args.get('username', '')
+    slack_id = flask.request.args.get('slack_id', '')
+    git = flask.request.args.get('git', '')
+    timezone = flask.request.args.get('timezone', '')
+
+    req_all = flask.request.args.get('req_all', '')
+
+    if flask.request.method == 'POST':
+        return database.insert_user(email=email, username=username, slack_id=slack_id,
+                                    langs=langs, git=git, timezone=timezone)
+
+    elif flask.request.method == 'PUT':
+        params = {}
+        if langs != '':
+            params['skills'] = langs
+        if git != '':
+            params['github'] = git
+        if timezone != '':
+            params['time'] = timezone
+        if username != '' and email != '':
+            params['name'] = username
+        if slack_id != '':
+            params['slack_id'] = slack_id
+        if email != '':
+            params['email'] = email
+        return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
+
+    elif flask.request.method == 'GET':
+        if req_all == 'true':
+            return database.get_all_users()
+        return database.get_user(email=email, username=username, slack_id=slack_id)
+
+    elif flask.request.method == 'DELETE':
+        return database.delete_user(email=email, username=username, slack_id=slack_id)
+
+
 @app.route('/_login')
 def login():
     uri = 'https://github.com/login/oauth/authorize' \
@@ -58,7 +102,7 @@ def login():
 
 @app.route('/_callback')
 def auth():
-    session_code = flask.request.args.get('code')
+    session_code = flask.request.args.get('code', '')
 
     if session_code != '':
         resp = requests.post(
