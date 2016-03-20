@@ -46,14 +46,14 @@ a:hover {
 }
 
 .dev-logo {
-  margin-left: 25px;
+    text-align: center;
 }
 
 .text-logo {
   color: #1AADFF;
-  font-weight: 500;
-  margin-left: 45px;
+  font-weight: 100;
   font-size: 2.1em;
+  letter-spacing: 2px;
 }
 
 .join-text {
@@ -95,23 +95,28 @@ a:hover {
 }
 
 .list-position-control {
-  margin-left: 130px;
-  margin-bottom: -5px;
+  margin-bottom: -6px;
 }
 
-.sections ul,
+ul.sections,
 .sidebar-nav ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .sections li,
 .sidebar-nav li {
   display: inline;
   color: #E1E1E1;
-  font-size: 1.25em;
   margin: 0 10px 0 0;
 }
-
+.sections a {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: border-width 0.1s;
+}
 .sections a:hover {
   color: white;
   border-bottom: 6px solid rgba(26, 173, 255, .25);
