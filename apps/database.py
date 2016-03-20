@@ -51,7 +51,7 @@ def get_all_users():
 @choose_identifier
 def delete_user(id_key, id_value, **_):
     db.remove(User[id_key] == id_value)
-    return 'deleted: {}'.format(id_key)
+    return 'deleted: {}'.format(id_value)
 
 if __name__ == '__main__':
     pass
