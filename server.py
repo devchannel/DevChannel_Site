@@ -55,33 +55,36 @@ def _database():
     if flask.session.get('username') not in server_config.ALLOWED_USERS:
         return 'Unauthorized'
 
-    langs = flask.request.args.get('langs', '')
+    skills = flask.request.args.get('skills', '')
     email = flask.request.args.get('email', '')
     username = flask.request.args.get('username', '')
     slack_id = flask.request.args.get('slack_id', '')
     git = flask.request.args.get('git', '')
     timezone = flask.request.args.get('timezone', '')
+    points = flask.request.args.get('points', '')
 
     req_all = flask.request.args.get('req_all', '')
 
     if flask.request.method == 'POST':
         return database.insert_user(email=email, username=username, slack_id=slack_id,
-                                    langs=langs, git=git, timezone=timezone)
+                                    skills=skills, git=git, timezone=timezone, points=0)
 
     elif flask.request.method == 'PUT':
         params = {}
-        if langs != '':
-            params['skills'] = langs
+        if skills != '':
+            params['skills'] = skills
         if git != '':
             params['github'] = git
         if timezone != '':
             params['time'] = timezone
         if username != '' and email != '':
-            params['name'] = username
+            params['username'] = username
         if slack_id != '':
             params['slack_id'] = slack_id
         if email != '':
             params['email'] = email
+        if points != '':
+            params['points'] = points
         return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
 
     elif flask.request.method == 'GET':

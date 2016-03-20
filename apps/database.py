@@ -13,7 +13,7 @@ def choose_identifier(original):
             kwargs['id_value'] = kwargs.get('slack_id')
             del kwargs['slack_id']
         elif kwargs.get('username'):
-            kwargs['id_key'] = 'name'
+            kwargs['id_key'] = 'username'
             kwargs['id_value'] = kwargs.get('username')
             del kwargs['username']
         elif kwargs.get('email'):
