@@ -36,7 +36,7 @@ def insert_user(skills='', git='', timezone='', email='', username='', slack_id=
 @choose_identifier
 def update_user(params, id_key, id_value, **_):
     db.update(params, User[id_key] == id_value)
-    return 'updated {} with: {}'.format(id_key, params)
+    return 'updated {} with: {}'.format(id_value, params)
 
 
 @choose_identifier
