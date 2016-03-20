@@ -41,7 +41,7 @@ def update_user(params, id_key, id_value, **_):
 
 @choose_identifier
 def get_user(id_key, id_value, **_):
-    return json.dumps(db.get(User[id_key] == id_value)) or 'User not found'
+    return json.dumps(db.get(User[id_key] == id_value) or 'User not found')
 
 
 def get_all_users():
