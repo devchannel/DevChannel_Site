@@ -13,7 +13,7 @@ def choose_identifier(original):
             kwargs['id_value'] = kwargs.get('slack_id')
             del kwargs['slack_id']
         elif kwargs.get('username'):
-            kwargs['id_key'] = 'name'
+            kwargs['id_key'] = 'username'
             kwargs['id_value'] = kwargs.get('username')
             del kwargs['username']
         elif kwargs.get('email'):
@@ -27,8 +27,8 @@ def choose_identifier(original):
     return wrapper
 
 
-def insert_user(langs='', git='', timezone='', email='', username='', slack_id='', points=0):
-    data = {"skills": langs, "github": git, "time": timezone, "email": email, "username": username, 'slack_id': slack_id, "points": points}
+def insert_user(skills='', git='', timezone='', email='', username='', slack_id='', points=0):
+    data = {"skills": skills, "github": git, "time": timezone, "email": email, "username": username, 'slack_id': slack_id, "points": points}
     db.insert(data)
     return 'added: {}'.format(data)
 
@@ -36,12 +36,12 @@ def insert_user(langs='', git='', timezone='', email='', username='', slack_id='
 @choose_identifier
 def update_user(params, id_key, id_value, **_):
     db.update(params, User[id_key] == id_value)
-    return 'updated {} with: {}'.format(id_key, params)
+    return 'updated {} with: {}'.format(id_value, params)
 
 
 @choose_identifier
 def get_user(id_key, id_value, **_):
-    return json.dumps(db.get(User[id_key] == id_value)) or 'User not found'
+    return json.dumps(db.get(User[id_key] == id_value) or 'User not found')
 
 
 def get_all_users():
@@ -51,7 +51,7 @@ def get_all_users():
 @choose_identifier
 def delete_user(id_key, id_value, **_):
     db.remove(User[id_key] == id_value)
-    return 'deleted: {}'.format(id_key)
+    return 'deleted: {}'.format(id_value)
 
 if __name__ == '__main__':
     pass

@@ -42,9 +42,9 @@ lang_channels = {
 }
 
 
-def send_invite(email, p_langs):
+def send_invite(email, skills):
     # remove all whitespace hack, then lowercase and split by ,
-    languages = ''.join(p_langs.split()).lower().split(',')
+    languages = ''.join(skills.split()).lower().split(',')
 
     join_these = ''
     for lang in languages:
@@ -81,5 +81,5 @@ def send_invite(email, p_langs):
             return -1, dict_data['error']
 
     elif dict_data['ok']:
-        database.insert_user(langs=p_langs, email=email)
+        database.insert_user(langs=skills, email=email)
         return 0, 'Check your mail box :)'
