@@ -28,30 +28,47 @@ def choose_identifier(original):
 
 
 def insert_user(skills='', git='', timezone='', email='', username='', slack_id='', points='0'):
-    data = {"skills": skills, "github": git, "time": timezone, "email": email, "username": username, 'slack_id': slack_id, "points": points}
+    data = {"skills": skills, "github": git, "time": timezone, "email": email, "username": username,
+            'slack_id': slack_id, "points": points}
     db.insert(data)
-    return 'added: {}'.format(data)
+    return json.dumps(
+        {'ok': True, 'response': 'added: {}'.format(data)}
+    )
 
 
 @choose_identifier
 def update_user(params, id_key, id_value, **_):
     db.update(params, User[id_key] == id_value)
-    return 'updated {} with: {}'.format(id_value, params)
+    return json.dumps(
+        {'ok': True, 'response': 'updated: {} with {}'.format(id_value, params)}
+    )
 
 
 @choose_identifier
 def get_user(id_key, id_value, **_):
-    return json.dumps(db.get(User[id_key] == id_value) or 'User not found')
+    resp = db.get(User[id_key] == id_value)
+    if resp:
+        return json.dumps(
+            {'ok': True, 'response': resp}
+        )
+    else:
+        return json.dumps(
+            {'ok': False, 'response': 'User not found'}
+        )
 
 
 def get_all_users():
-    return json.dumps(db.all())
+    return json.dumps(
+        {'ok': False, 'response': db.all()}
+    )
 
 
 @choose_identifier
 def delete_user(id_key, id_value, **_):
     db.remove(User[id_key] == id_value)
-    return 'deleted: {}'.format(id_value)
+    return json.dumps(
+        {'ok': True, 'response': 'deleted: {}'.format(id_value)}
+    )
 
 if __name__ == '__main__':
     pass

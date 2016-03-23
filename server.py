@@ -55,45 +55,29 @@ def _database():
     if flask.session.get('username') not in server_config.ALLOWED_USERS:
         return 'Unauthorized'
 
-    skills = flask.request.args.get('skills', '')
-    email = flask.request.args.get('email', '')
-    username = flask.request.args.get('username', '')
-    slack_id = flask.request.args.get('slack_id', '')
-    git = flask.request.args.get('git', '')
-    timezone = flask.request.args.get('timezone', '')
-    points = flask.request.args.get('points', '')
-
-    req_all = flask.request.args.get('req_all', '')
+    args = {var_name: flask.request.args.get(var_name, '')
+            for var_name in ('email', 'username', 'slack_id', 'git', 'skills', 'timezone', 'points')}
 
     if flask.request.method == 'POST':
-        return database.insert_user(email=email, username=username, slack_id=slack_id,
-                                    skills=skills, git=git, timezone=timezone, points=0)
+        return database.insert_user(email=args['email'], username=args['username'], slack_id=args['slack_id'],
+                                    skills=args['skills'], git=args['git'], timezone=args['timezone'],
+                                    points=args['points'])
 
     elif flask.request.method == 'PUT':
-        params = {}
-        if skills != '':
-            params['skills'] = skills
-        if git != '':
-            params['github'] = git
-        if timezone != '':
-            params['time'] = timezone
-        if username != '' and email != '':
-            params['username'] = username
-        if slack_id != '':
-            params['slack_id'] = slack_id
-        if email != '':
-            params['email'] = email
-        if points != '':
-            params['points'] = points
-        return database.update_user(email=email, username=username, slack_id=slack_id, params=params)
+        params = {var_name: args[var_name]
+                  for var_name in ('skills', 'git', 'timezone', 'username', 'email', 'points')
+                  if args[var_name] != ''}
+
+        return database.update_user(email=args['email'], username=args['username'], slack_id=args['slack_id'],
+                                    params=params)
 
     elif flask.request.method == 'GET':
-        if req_all == 'true':
+        if flask.request.args.get('req_all') == 'true':
             return database.get_all_users()
-        return database.get_user(email=email, username=username, slack_id=slack_id)
+        return database.get_user(email=args['email'], username=args['username'], slack_id=args['slack_id'])
 
     elif flask.request.method == 'DELETE':
-        return database.delete_user(email=email, username=username, slack_id=slack_id)
+        return database.delete_user(email=args['email'], username=args['username'], slack_id=args['slack_id'])
 
 
 @app.route('/_login')
