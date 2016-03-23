@@ -46,10 +46,7 @@ def send_invite(email, skills):
     # remove all whitespace hack, then lowercase and split by ,
     languages = ''.join(skills.split()).lower().split(',')
 
-    join_these = ''
-    for lang in languages:
-        if lang in lang_channels:
-            join_these += lang_channels[lang] + ','
+    join_these = ','.join(lang_channels[lang] for lang in languages if lang in lang_channels)
 
     response = requests.post(invite_config.SLACK_INV_URL,
                              params={
@@ -81,5 +78,5 @@ def send_invite(email, skills):
             return -1, dict_data['error']
 
     elif dict_data['ok']:
-        database.insert_user(langs=skills, email=email)
+        database.insert_user(skills=skills, email=email)
         return 0, 'Check your mail box :)'
