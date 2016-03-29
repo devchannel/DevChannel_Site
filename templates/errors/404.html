@@ -7,6 +7,5 @@
     Sorry, we couldn't find the page you were looking for.<br>
     If you got lost click <a href="{{ url_for('index') }}">here</a> to safely return to the main page.
 <p>
-    <!--TODO: Contact link-->
-    If you believe this is a mistake <a href="{{ url_for('about') }}">contact us</a>!
+    If you believe this is a mistake <a href="{{ url_for('about', _anchor="contact") }}">contact us</a>!
 {% endblock %}
