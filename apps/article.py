@@ -13,7 +13,7 @@ class Article:
         self.author = author
         self.text = text
         if publish_date is None:
-            date = str(datetime.datetime.now().date())
+            publish_date = str(datetime.datetime.now().date())
         self.publish_date = publish_date
 
     def __repr__(self):
