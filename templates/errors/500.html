@@ -1,0 +1,11 @@
+{% extends "errors/error_layout.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block error %}
+<p>
+    Sorry, the impossible happened! It seems like there is an error in our application.<br>
+    For now please click <a href="{{ url_for('index') }}">here</a> to safely return to the main page.
+<p>
+    If it's not the first time you see this page, please <a href="{{ url_for('about', _anchor="contact") }}">contact us</a>!
+{% endblock %}
