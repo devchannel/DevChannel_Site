@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - {% block title %}{% endblock %}</title>
+    <!--<script src="static/js/sw-register.js"></script>-->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/light.css') }}" id="style" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body>
+    <div id="error_wrapper">
+        <h2>{{ self.title() }}</h2>
+
+        {% block error %} {% endblock %}
+    </div>
+</body>
+</html>

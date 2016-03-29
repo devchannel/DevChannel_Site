@@ -53,7 +53,7 @@ def join():
 @app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def _database():
     if flask.session.get('username') not in server_config.ALLOWED_USERS:
-        return 'Unauthorized'
+        flask.abort(403)
 
     args = {var_name: flask.request.args.get(var_name, '')
             for var_name in ('email', 'username', 'slack_id', 'github', 'skills', 'timezone', 'points')}
@@ -146,6 +146,18 @@ def parse(txt):
             else:
                 resp[-1] += '\n' + line
     return resp
+
+
+@app.errorhandler(403)
+@app.errorhandler(404)
+@app.errorhandler(500)
+def page_not_found(error):
+    if str(error).startswith('403'):
+        return flask.render_template('errors/403.html'), 403
+    elif str(error).startswith('404'):
+        return flask.render_template('errors/404.html'), 404
+    elif str(error).startswith('500'):
+        return flask.render_template('errors/500.html'), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000, threaded=True)

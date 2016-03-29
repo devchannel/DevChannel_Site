@@ -1,0 +1,11 @@
+{% extends "errors/error_layout.html" %}
+
+{% block title %}Shall Not Pass{% endblock %}
+
+{% block error %}
+<p>
+    Sorry, only the Chosen Ones are allowed to visit this page.<br>
+    You might want to consider returning to the <a href="{{ url_for('index') }}">main page</a>.
+<p>
+    If you just forgot to login, you can do that <a href="{{ url_for('login') }}">here</a>!
+{% endblock %}
