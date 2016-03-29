@@ -4,8 +4,7 @@ import flask
 import requests
 
 import server_config
-
-from apps import invite, database
+from apps import invite, database, article
 
 app = flask.Flask(__name__)
 app.secret_key = server_config.SERVER_SECRET
@@ -14,7 +13,8 @@ app.secret_key = server_config.SERVER_SECRET
 @app.route('/')
 @app.route('/index')
 def index():
-    return flask.render_template('index.html')
+    articles = [article.Article(**params)for params in article.get_articles()]
+    return flask.render_template('index.html', articles=reversed(articles))
 
 
 @app.route('/docs')
@@ -115,6 +115,37 @@ def auth():
                     return flask.redirect(flask.url_for('index'))
 
     return 'Something went wrong'
+
+
+@app.route('/_upload', methods=['GET', 'POST'])
+def _upload():
+    if flask.session.get('username') not in server_config.ALLOWED_USERS:
+        flask.abort(403)
+
+    if flask.request.method == 'POST':
+        author = flask.request.form['author']
+        text = flask.request.form['text']
+        text = parse(text)
+        article.save_article(article.Article(author, text))
+        return 'Done'
+    return flask.render_template('_upload.html')
+
+
+def parse(txt):
+    txt = txt.split('\r\n')
+    resp = ['']
+    for line in txt:
+        if line.startswith('    '):
+            if isinstance(resp[-1], str):
+                resp.append([line[4:]])
+            else:
+                resp[-1].append(line[4:])
+        else:
+            if isinstance(resp[-1], list):
+                resp.append(line)
+            else:
+                resp[-1] += '\n' + line
+    return resp
 
 
 @app.errorhandler(403)
