@@ -65,7 +65,7 @@ def _database():
 
     elif flask.request.method == 'PUT':
         params = {var_name: args[var_name]
-                  for var_name in ('skills', 'github', 'timezone', 'username', 'email', 'points')
+                  for var_name in ('skills', 'github', 'timezone', 'slack_id', 'username', 'email', 'points')
                   if args[var_name] != ''}
 
         return database.update_user(email=args['email'], username=args['username'], slack_id=args['slack_id'],
