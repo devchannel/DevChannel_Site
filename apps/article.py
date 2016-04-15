@@ -33,7 +33,7 @@ def htmlify(obj):
 
 @htmlify.register(str)
 def _(text):
-    content = html.escape(text).replace('\n', '<br>\n')
+    content = html.escape(text).replace('\n', '<br><br>\n')
     return '<p class="announcement">' + content + '</p>'
 
 
