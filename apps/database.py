@@ -8,11 +8,7 @@ User = Query()
 
 def choose_identifier(original):
     def wrapper(**kwargs):
-        if kwargs.get('email'):
-            kwargs['id_key'] = 'email'
-            kwargs['id_value'] = kwargs.get('email')
-            del kwargs['email']
-        elif kwargs.get('slack_id'):
+        if kwargs.get('slack_id'):
             kwargs['id_key'] = 'slack_id'
             kwargs['id_value'] = kwargs.get('slack_id')
             del kwargs['slack_id']
@@ -20,6 +16,10 @@ def choose_identifier(original):
             kwargs['id_key'] = 'username'
             kwargs['id_value'] = kwargs.get('username')
             del kwargs['username']
+        elif kwargs.get('email'):
+            kwargs['id_key'] = 'email'
+            kwargs['id_value'] = kwargs.get('email')
+            del kwargs['email']
         else:
             return 'Please specify email, username or id'
 

@@ -64,12 +64,16 @@ def _database():
                                     points=args['points'])
 
     elif flask.request.method == 'PUT':
-        params = {var_name: args[var_name]
-                  for var_name in ('skills', 'github', 'timezone', 'slack_id', 'username', 'email', 'points')
-                  if args[var_name] != ''}
+        params = {key: value for key, value in args.items() if value}
 
-        return database.update_user(email=args['email'], username=args['username'], slack_id=args['slack_id'],
-                                    params=params)
+        # slack_id is the primary ID of every user
+        # BUT when they sign up on the site, only their email gets stored, so we can't identify them with slack_id
+        # so when they sign into slack for the first time, we update their email and slack id values
+        if flask.request.args.get('cheat') == 'first_signin':
+            return database.update_user(email=args['email'], params=params)
+        else:
+            return database.update_user(email=args['email'], username=args['username'], slack_id=args['slack_id'],
+                                        params=params)
 
     elif flask.request.method == 'GET':
         if flask.request.args.get('req_all') == 'true':
