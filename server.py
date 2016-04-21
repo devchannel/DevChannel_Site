@@ -29,7 +29,10 @@ def about():
 
 @app.route('/resources')
 def resources():
-    return flask.render_template('resources.html')
+    # TODO: just temporary solution, will cache it later, and use OrderedDict
+    with open('database/resources.json', 'r') as f:
+        res = json.loads(f.read())
+    return flask.render_template('resources.html', link=res)
 
 
 @app.route('/join', methods=['GET', 'POST'])

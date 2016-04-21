@@ -6,6 +6,7 @@
     <div class="row">
         <h1 id="title">Resources</h1>
     </div>
+<!--
     <div class="row">
         <div class="announcement_container">
             <div class="row posters_name">
@@ -18,4 +19,24 @@
             </div>
         </div>
     </div>
+-->
+    {% for language, val in link.items() %}
+    <div>
+        <a href="#{{ language }}" data-toggle="collapse">{{ language }}</a>
+        <div id="{{ language }}" class="collapse">
+            {% for p_title, resources in val.items() %}
+            <ul>
+                <li>{{ p_title }}
+                    <ul>
+                        {% for title, description in resources.items() %}
+                        <li>{{ title }} - {{ description }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
 {% endblock %}
