@@ -1,0 +1,16 @@
+{
+  "Python":
+  {
+    "beginner": {
+      "Some book title": "It's super cool and funky. I'm probably some longer text but idk how long. Probably just a few sentences.",
+      "Some podcast title": "Even cooler and funkier. I run out of ideas that's when I just jump to Alice references"},
+    "advanced": {
+      "Through the Looking-Glass": "... and What Alice Found There. Have you ever heard of Jabberwocky?"}
+  },
+  "Arnold-C":
+  {
+    "intermediate": {
+      "Adventures in Wonderland": "Why is a raven like a writing-desk? Have you guessed the riddle yet?",
+      "Haddoks' Eyes": "No, you don't understand. That's what the name is Called."}
+  }
+}
