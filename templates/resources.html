@@ -29,7 +29,7 @@
                 <li>{{ p_title }}
                     <ul>
                         {% for title, description in resources.items() %}
-                        <li>{{ title }} - {{ description }}</li>
+                        <li>{{ title }} - {{ description|safe }}</li>
                         {% endfor %}
                     </ul>
                 </li>
