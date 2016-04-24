@@ -3,6 +3,7 @@ from collections import OrderedDict
 
 import flask
 import requests
+from werkzeug.contrib.cache import SimpleCache
 
 import server_config
 from apps import invite, database, article
@@ -30,9 +31,11 @@ def about():
 
 @app.route('/resources')
 def resources():
-    # TODO: just temporary solution, will cache it later, and use OrderedDict
-    with open('database/resources.json', 'r') as f:
-        res = json.loads(f.read(), object_pairs_hook=OrderedDict)
+    res = cache.get('resources')
+    if not res:
+        with open('database/resources.json', 'r') as f:
+            res = json.loads(f.read(), object_pairs_hook=OrderedDict)
+        cache.set('resources', res, timeout=1800)  # 30 mins timeout
     return flask.render_template('resources.html', link=res)
 
 
@@ -167,4 +170,5 @@ def page_not_found(error):
         return flask.render_template('errors/500.html'), 500
 
 if __name__ == '__main__':
+    cache = SimpleCache()
     app.run(host='0.0.0.0', threaded=True, port=3000)
