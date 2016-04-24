@@ -1,4 +1,5 @@
 import json
+from collections import OrderedDict
 
 import flask
 import requests
@@ -31,7 +32,7 @@ def about():
 def resources():
     # TODO: just temporary solution, will cache it later, and use OrderedDict
     with open('database/resources.json', 'r') as f:
-        res = json.loads(f.read())
+        res = json.loads(f.read(), object_pairs_hook=OrderedDict)
     return flask.render_template('resources.html', link=res)
 
 
