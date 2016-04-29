@@ -4,18 +4,18 @@
 
 {% block content %}
     <div class="row">
-        <h1 class="title">Members</h1>
+        <h1 id="title">Members</h1>
     </div>
     <div class="row">
-        <div class="announcement_container">
+        <div class="members_container">
             <div class="row">
                 <div class="col-md-12">
-                    <table style="width: 100%">
+                    <table class="members_table">
                         <tr>
-                            <td>USERNAME</td>
-                            <td>POINTS</td>
-                            <td>LANGUAGES</td>
-                            <td>LAST SEEN</td>
+                            <th>USERNAME</th>
+                            <th>POINTS</th>
+                            <th>LANGUAGES</th>
+                            <th>LAST SEEN</th>
                         {% for member in members %}
                             <tr>
                                 <td>{{ "{}".format(member[0]) }}</td>
