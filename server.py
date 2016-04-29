@@ -31,6 +31,20 @@ def about():
 def resources():
     return flask.render_template('resources.html')
 
+@app.route('/members')
+def members():
+    usernames = []
+    users = []
+    all_users = json.loads(database.get_all_users())
+    if all_users['ok']:
+        for user in all_users['response']:
+            usernames.append(user['username'])
+        usernames = sorted(usernames)
+        for u in usernames:
+            member = json.loads(database.get_user(username=u))['response']
+            users.append([u, member['points'], member['skills'], 'Not available'])
+    return flask.render_template('members.html', members=users)
+
 
 @app.route('/join', methods=['GET', 'POST'])
 def join():
