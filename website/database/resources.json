@@ -17,6 +17,18 @@
             "<a href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI"
         }
     },
+    "HASKELL":
+    {
+        "Beginner": {
+            "<a href='http://learnyouahaskell.com/'>Learn You a Haskell/</a>": "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you.",
+            "<a href=http://book.realworldhaskell.org/'>Real World Haskell</a>": "The other go-to recommendation for beginners (I personally recommend this book over Learn You a Haskell). The first 4 or so chapters may feel overwhelming if you've never done functional programming before so don't rush and take your time.",
+            "<a href='http://haskellbook.com/'>Haskell Programming</a>": "This book targets people without any programming experience. If you want to learn Haskell as your first programming language you should probably try this book instead of the 2 mentioned above. DISCLAIMER: This book is still Work in Progress, but since there is no better resource for complete beginners I included it."
+        },
+        "Intermediate": {
+            "<a href='https://wiki.haskell.org/Typeclassopedia'>Typeclassopedia</a>": "If you feel comfortable with Haskell and the standard library, Typeclassopedia is a great place to learn about higher level concepts.",
+            "<a href='http://www.amazon.com/dp/0262660717/?tag=stackoverfl08-20'>Basic Category Theory</a>": "This book is surprisingly about... category theory. If you don't want to buy the book (which is absolutely worth the it btw) check out the author's shorter article at http://repository.cmu.edu/cgi/viewcontent.cgi?article=2846&context=compsci."
+        }
+    },
   "WEB":
   {
       "GENERAL": {
