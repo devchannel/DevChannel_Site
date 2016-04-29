@@ -41,17 +41,14 @@ def resources():
 
 @app.route('/members')
 def members():
-    usernames = []
     users = []
     all_users = json.loads(database.get_all_users())
     if all_users['ok']:
         for user in all_users['response']:
-            usernames.append(user['username'])
-        usernames = sorted(usernames)
-        for u in usernames:
-            member = json.loads(database.get_user(username=u))['response']
-            users.append([u, member['points'], member['skills'], 'Not available'])
-    return flask.render_template('members.html', members=users)
+            users.append([user['username'], user['points'], user['skills'], 'Not Available'])
+        users = sorted(users, key=lambda x: x[0])
+        return flask.render_template('members.html', members=users)
+    # return Idk what to put here
 
 
 @app.route('/join', methods=['GET', 'POST'])
@@ -185,4 +182,4 @@ def page_not_found(error):
         return flask.render_template('errors/500.html'), 500
 
 if __name__ == '__main__':
-    pass
+    app.run(host='0.0.0.0', threaded=True, port=3000, debug=True)
