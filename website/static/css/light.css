@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: #E1E1E1;
+  background: #F0F0F0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -19,8 +19,62 @@ a:hover {
   color: white;
 }
 
+/* Resources */
+.resource_language {
+  height: 32px;
+  line-height: 32px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  display: inline-block;
+  width: 100%;
+  margin-top: 16px;
+  padding-left: 32px;
+  position: relative;
+  color: #444444;
+  transition: 0.1s all;
+}
+.resource_language:before {
+  content: "\f067";
+  font-family: "FontAwesome", sans-serif;
+  color: #1AADFF;
+  font-size: 12px;
+  position: absolute;
+  left: 12px;
+}
+.resource_language:hover {
+  border-bottom: 2px solid #1AADFF;
+}
+.resource_language[aria-expanded="true"]:hover {
+  border-bottom: 1px solid #CCCCCC;
+}
+.resource_language[aria-expanded="true"]:before {
+  content: "\f068";
+}
+.resource_language:hover, .resource_language:focus {
+  color: #444444;
+  text-decoration: none;
+}
+.collapse, .collapsing {
+  background-color: #EDEDED;
+  border: 1px solid #CCCCCC;
+  border-top: 0;
+  padding-right: 8px;
+  padding-top: 8px;
+  border-bottom: 2px solid #1AADFF;
+}
 .resource{
-    text-decoration: underline;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #0c4a6e;
+}
+.resource:hover {
+  color: #0c4a6e;
+  text-decoration: underline;
+}
+.resource:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (min-width: 970px){
@@ -189,8 +243,12 @@ ul.sections,
 
 /* Index / Main */
 #title {
-  color: #072B40;
   font-size: 2em;
+  font-weight: 300;
+  color: #444444;
+  border-bottom: 1px solid #E0E0E0;
+  box-shadow: 0 2px 1px -1px #FFFFFF;
+  padding-bottom: 4px;
 }
 
 .announcement_container,
@@ -205,8 +263,9 @@ ul.sections,
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius: 0.2em 2em 2em;
-  box-shadow: rgba(0,0,0,0.8) 0 0 0.2em;
+  border-radius: 4px;
+  border: 1px solid #AAA;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
 .field {
@@ -271,4 +330,56 @@ ul.sections,
 .link:hover {
   color: #1AADFF !important;
   text-decoration: underline;
+}
+
+/* Members */
+.members_container {
+  background-color: white;
+  color: #072B40;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0;
+  margin: 1em 0 1em 0;
+  border: 1px solid #AAA;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.members_table {
+  width: 100%;
+  color: #444444;
+  overflow: hidden;
+  border-collapse: separate;
+}
+.members_table th {
+  background-color: #EDEDED;
+  border-bottom: 1px solid #E0E0E0;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 8px;
+  font-size: 0.9em;
+}
+.members_table td {
+  border-left: 1px solid #E0E0E0;
+  padding: 4px 8px;
+}
+.members_table td:first-child {
+  border-left: 0;
+}
+.members_table tr {
+  transition: 0.1s all;
+}
+.members_table tr td:last-child {
+  border-right: 2px solid transparent;
+}
+.members_table tr:nth-child(2n+1) {
+  background-color: #F6F6F6;
+}
+.members_table tr:hover {
+  background-color: #EDEDED;
+}
+.members_table tr:hover td:first-child {
+  border-left: 2px solid #0D94CF;
+  padding-left: 6px;
+}
+.members_table tr:hover td:last-child {
+  border-right: 2px solid #0D94CF;
 }
