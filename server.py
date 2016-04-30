@@ -33,15 +33,19 @@ def resources():
 
 @app.route('/members')
 def members():
+    order = flask.request.args.get('order', '')
+    if order == '': order = 'alpha'
     users = []
     all_users = json.loads(database.get_all_users())
     if all_users['ok']:
         for user in all_users['response']:
             users.append([user['username'], user['points'], user['skills'], 'Not Available'])
-        users = sorted(users, key=lambda x: x[0])
+        if order == 'points':
+            users = sorted(users, key=lambda x: x[1], reverse=True)
+        else:
+            users = sorted(users, key=lambda x: x[0])
         return flask.render_template('members.html', members=users)
     # return Idk what to put here
-
 
 @app.route('/join', methods=['GET', 'POST'])
 def join():
