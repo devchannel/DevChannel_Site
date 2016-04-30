@@ -5,12 +5,15 @@
             "<a href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
             "<a href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI",
             "<a href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
+        },
+        "Tips":{
+            "<a href='https://justgetflux.com/'>f.lux</a>": "\"(...)it makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.\""
         }
     },
     "HASKELL":
     {
         "Beginner": {
-            "<a href='http://learnyouahaskell.com/'>Learn You a Haskell/</a>": "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you.",
+            "<a href='http://learnyouahaskell.com/'>Learn You a Haskell</a>": "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you.",
             "<a href=http://book.realworldhaskell.org/'>Real World Haskell</a>": "The other go-to recommendation for beginners (I personally recommend this book over Learn You a Haskell). The first 4 or so chapters may feel overwhelming if you've never done functional programming before so don't rush and take your time.",
             "<a href='http://haskellbook.com/'>Haskell Programming</a>": "This book targets people without any programming experience. If you want to learn Haskell as your first programming language you should probably try this book instead of the 2 mentioned above. DISCLAIMER: This book is still Work in Progress, but since there is no better resource for complete beginners I included it."
         },
