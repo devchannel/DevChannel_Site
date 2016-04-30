@@ -1,4 +1,12 @@
 {
+    "GENERAL":
+    {
+        "Challenges":{
+            "<a href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
+            "<a href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI",
+            "<a href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
+        }
+    },
     "HASKELL":
     {
         "Beginner": {
@@ -23,10 +31,7 @@
             "<a href='http://www.amazon.com/Python-Cookbook-Third-David-Beazley/dp/1449340377'>Python Cookbook (3e)</a>": "As the name suggests it's a general cookbook that also covers more advanced recipes and highlights features from python3. Altho we suggest you read the book, because it's great, the receips are available for free on <a href='https://github.com/dabeaz/python-cookbook'><i>Beazley's github page</i></a>"
         },
         "Challenges": {
-            "<a href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
-            "<a href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell",
-            "<a href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make cron",
-            "<a href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI"
+            "<a href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make cron"
         }
     },
   "WEB":
