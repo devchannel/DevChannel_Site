@@ -10,6 +10,16 @@
             "<a class='resource' href='https://justgetflux.com/'>f.lux</a>": "\"(...)it makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.\""
         }
     },
+    "C#": {
+        "Beginner": {
+            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx'>MSDN</a> (by raylu)": "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples.",
+            "<a class='resource' href='http://www.csharpcourse.com/>C# Yellow Book</a>": "If for some reason you are obsessed with books and/or hate the MSDN site you should try the Yellow Book. Make sure you also grab the course slides and use them together with the book!"
+        },
+        "Intermediate": {
+            "<a class='resource' href='http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454'>CLR via C#</a>": "Learn the inns and outs of the Common Language Runtime",
+            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/ff921152.aspx>Dependency Injection</a>": "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
+        }
+    },
     "HASKELL":
     {
         "Beginner": {
