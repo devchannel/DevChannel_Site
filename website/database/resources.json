@@ -18,7 +18,7 @@
         },
         "Intermediate": {
             "<a class='resource' href='http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454'>CLR via C#</a>": "Learn the inns and outs of the Common Language Runtime",
-            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/ff921152.aspx>Dependency Injection</a>": "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
+            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/ff921152.aspx'>Dependency Injection</a>": "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
         }
     },
     "HASKELL":
