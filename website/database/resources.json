@@ -2,12 +2,18 @@
     "GENERAL":
     {
         "Challenges":{
-            "<a class='resource' href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
-            "<a class='resource' href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI",
-            "<a class='resource' href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
+            "<a class='resource' href='http://adventofcode.com/'>Advent of Code</a>": "A lot of nteresting programming puzzles. (Beginner-Intermediate)"
+        },
+        "Books":{
+            "<a class='resource' href='https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md'>free-programming-books</a>": "A loooong list of free books to learn about a lot of programming subjects."
         },
         "Tips":{
             "<a class='resource' href='https://justgetflux.com/'>f.lux</a>": "\"(...)it makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.\""
+        }
+    },
+    "C": {
+        "Beginner": {
+            "<a class='resource' href='https://en.wikibooks.org/wiki/C_Programming'>C Programming</a> (book)": "Great Openbook on C"
         }
     },
     "C#": {
@@ -33,6 +39,25 @@
             "<a class='resource' href='http://www.amazon.com/dp/0262660717/?tag=stackoverfl08-20'>Basic Category Theory</a>": "This book is surprisingly about... category theory. If you don't want to buy the book (which is absolutely worth the it btw) check out the author's shorter article at http://repository.cmu.edu/cgi/viewcontent.cgi?article=2846&context=compsci."
         }
     },
+    "JAVASCRIPT":
+    {
+        "Beginner":{
+            "<a class='resource' href='http://eloquentjavascript.net/'>EloquentJS</a> (book)": "Free Book explaining fundamentals of programming and Js, gets difficult after time.",
+            "<a class='resource' href='https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js'>Automate your tasks easily using Gulp.js</a>": "Nice tutorial on how to begin using Gulp",
+            "<a class='resource' href='https://addyosmani.com/resources/essentialjsdesignpatterns/book/'>Learning JavaScript Design Patterns</a> (book)": "Free Book about Design patterns in general but with priority on Javascript ones.",
+            "<a class='resource' href='https://laracasts.com/series/learning-vue-step-by-step'>Learning Vue 1.0: Step By Step</a>": "Awesome screencasts on vuejs"
+        },
+        "Intermediate":{
+            "<a class='resource' href='https://github.com/getify/You-Dont-Know-JS'>YouDontKnowJS</a> (book)": "\"This is a series of books diving deep into the core mechanisms of the JavaScript language.\"",
+            "<a class='resource' href='http://play.elevatorsaga.com/'>Elevator Saga The Elevator Programming Game</a> (game)": "Create code to handle elevators"
+        }
+    },
+    "LISP":
+    {
+        "Intermediate":{
+            "<a class='resource' href='http://www.gigamonkeys.com/book/'>Practical Common Lisp</a> (book)": "Learning Common Lisp"
+        }
+    },
     "PYTHON":
     {
         "Beginner": {
@@ -45,7 +70,23 @@
             "<a class='resource' href='http://www.amazon.com/Python-Cookbook-Third-David-Beazley/dp/1449340377'>Python Cookbook (3e)</a>": "As the name suggests it's a general cookbook that also covers more advanced recipes and highlights features from python3. Altho we suggest you read the book, because it's great, the receips are available for free on <a href='https://github.com/dabeaz/python-cookbook'><i>Beazley's github page</i></a>"
         },
         "Challenges": {
-            "<a class='resource' href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make a cron-like scheduler"
+            "<a class='resource' href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make a cron-like scheduler",
+            "<a class='resource' href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
+            "<a class='resource' href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI (Web Server Gateway Interface) web framework",
+            "<a class='resource' href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
+        }
+    },
+    "SQL":
+    {
+        "Beginner": {
+            "<a class='resource' href='http://sql.learncodethehardway.org/book/'>Learn SQL The Hard Way</a> (book)": "The book uses SQLite3 but can be used with any version of SQL to learn how to create and manipulate relational databases.",
+            "<a class='resource' href='http://sqlbolt.com/'>SQLBolt Introduction to SQL</a>": "Interactive tutorial on SQL."
+        }
+    },
+    "VIM":
+    {
+        "Begginer": {
+            "<a class='resource' href='http://vim-adventures.com/'>Vim Adventures</a> (game)": "Interactive browser game to learn Vim"
         }
     },
     "WEB":
