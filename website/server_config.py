@@ -1,5 +1,5 @@
 # github usernames
-ALLOWED_USERS = {'g4s-slack', 'youSeeMeRollin'}
+ALLOWED_USERS = {'g4s-slack', 'therightmandev'}
 
 # github login consts
 GIT_CLIENT_ID = ''
