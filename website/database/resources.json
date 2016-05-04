@@ -2,97 +2,97 @@
     "GENERAL":
     {
         "Challenges":{
-            "<a class='resource' href='http://adventofcode.com/'>Advent of Code</a>": "A lot of nteresting programming puzzles. (Beginner-Intermediate)"
+            "<a class='resource' target='_blank' href='http://adventofcode.com/'>Advent of Code</a>": "A lot of nteresting programming puzzles. (Beginner-Intermediate)"
         },
         "Books":{
-            "<a class='resource' href='https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md'>free-programming-books</a>": "A loooong list of free books to learn about a lot of programming subjects."
+            "<a class='resource' target='_blank' href='https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md'>free-programming-books</a>": "A loooong list of free books to learn about a lot of programming subjects."
         },
         "Tips":{
-            "<a class='resource' href='https://justgetflux.com/'>f.lux</a>": "\"(...)it makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.\""
+            "<a class='resource' target='_blank' href='https://justgetflux.com/'>f.lux</a>": "\"(...)it makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.\""
         }
     },
     "C": {
         "Beginner": {
-            "<a class='resource' href='https://en.wikibooks.org/wiki/C_Programming'>C Programming</a> (book)": "Great Openbook on C"
+            "<a class='resource' target='_blank' href='https://en.wikibooks.org/wiki/C_Programming'>C Programming</a> (book)": "Great Openbook on C"
         }
     },
     "C#": {
         "Beginner": {
-            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx'>MSDN</a> (by raylu)": "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples.",
-            "<a class='resource' href='http://www.csharpcourse.com/'>C# Yellow Book</a>": "If for some reason you are obsessed with books and/or hate the MSDN site you should try the Yellow Book. Make sure you also grab the course slides and use them together with the book!",
-            "<a class='resource' href='http://www.amazon.com/C-Depth-3rd-Jon-Skeet/dp/161729134X'>C# in Depth</a>": "The book assumes you have some experience with either C# or a similar language (java, c++). It highlights the new features and possibilities of C# 5."
+            "<a class='resource' target='_blank' href='https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx'>MSDN</a> (by raylu)": "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples.",
+            "<a class='resource' target='_blank' href='http://www.csharpcourse.com/'>C# Yellow Book</a>": "If for some reason you are obsessed with books and/or hate the MSDN site you should try the Yellow Book. Make sure you also grab the course slides and use them together with the book!",
+            "<a class='resource' target='_blank' href='http://www.amazon.com/C-Depth-3rd-Jon-Skeet/dp/161729134X'>C# in Depth</a>": "The book assumes you have some experience with either C# or a similar language (java, c++). It highlights the new features and possibilities of C# 5."
         },
         "Intermediate": {
-            "<a class='resource' href='http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454'>CLR via C#</a>": "Learn the inns and outs of the Common Language Runtime",
-            "<a class='resource' href='https://msdn.microsoft.com/en-us/library/ff921152.aspx'>Dependency Injection</a>": "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
+            "<a class='resource' target='_blank' href='http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454'>CLR via C#</a>": "Learn the inns and outs of the Common Language Runtime",
+            "<a class='resource' target='_blank' href='https://msdn.microsoft.com/en-us/library/ff921152.aspx'>Dependency Injection</a>": "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
         }
     },
     "HASKELL":
     {
         "Beginner": {
-            "<a class='resource' href='http://learnyouahaskell.com/'>Learn You a Haskell</a>": "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you.",
-            "<a class='resource' href='http://book.realworldhaskell.org/'>Real World Haskell</a>": "The other go-to recommendation for beginners (I personally recommend this book over Learn You a Haskell). The first 4 or so chapters may feel overwhelming if you've never done functional programming before so don't rush and take your time.",
-            "<a class='resource' href='http://haskellbook.com/'>Haskell Programming</a>": "This book targets people without any programming experience. If you want to learn Haskell as your first programming language you should probably try this book instead of the 2 mentioned above. DISCLAIMER: This book is still Work in Progress, but since there is no better resource for complete beginners I included it."
+            "<a class='resource' target='_blank' href='http://learnyouahaskell.com/'>Learn You a Haskell</a>": "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you.",
+            "<a class='resource' target='_blank' href='http://book.realworldhaskell.org/'>Real World Haskell</a>": "The other go-to recommendation for beginners (I personally recommend this book over Learn You a Haskell). The first 4 or so chapters may feel overwhelming if you've never done functional programming before so don't rush and take your time.",
+            "<a class='resource' target='_blank' href='http://haskellbook.com/'>Haskell Programming</a>": "This book targets people without any programming experience. If you want to learn Haskell as your first programming language you should probably try this book instead of the 2 mentioned above. DISCLAIMER: This book is still Work in Progress, but since there is no better resource for complete beginners I included it."
         },
         "Intermediate": {
-            "<a class='resource' href='https://wiki.haskell.org/Typeclassopedia'>Typeclassopedia</a>": "If you feel comfortable with Haskell and the standard library, Typeclassopedia is a great place to learn about higher level concepts.",
-            "<a class='resource' href='http://www.amazon.com/dp/0262660717/?tag=stackoverfl08-20'>Basic Category Theory</a>": "This book is surprisingly about... category theory. If you don't want to buy the book (which is absolutely worth the it btw) check out the author's shorter article at http://repository.cmu.edu/cgi/viewcontent.cgi?article=2846&context=compsci."
+            "<a class='resource' target='_blank' href='https://wiki.haskell.org/Typeclassopedia'>Typeclassopedia</a>": "If you feel comfortable with Haskell and the standard library, Typeclassopedia is a great place to learn about higher level concepts.",
+            "<a class='resource' target='_blank' href='http://www.amazon.com/dp/0262660717/?tag=stackoverfl08-20'>Basic Category Theory</a>": "This book is surprisingly about... category theory. If you don't want to buy the book (which is absolutely worth the it btw) check out the author's shorter article at http://repository.cmu.edu/cgi/viewcontent.cgi?article=2846&context=compsci."
         }
     },
     "JAVASCRIPT":
     {
         "Beginner":{
-            "<a class='resource' href='http://eloquentjavascript.net/'>EloquentJS</a> (book)": "Free Book explaining fundamentals of programming and Js, gets difficult after time.",
-            "<a class='resource' href='https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js'>Automate your tasks easily using Gulp.js</a>": "Nice tutorial on how to begin using Gulp",
+            "<a class='resource' target='_blank' href='http://eloquentjavascript.net/'>EloquentJS</a> (book)": "Free Book explaining fundamentals of programming and Js, gets difficult after time.",
+            "<a class='resource' target='_blank' href='https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js'>Automate your tasks easily using Gulp.js</a>": "Nice tutorial on how to begin using Gulp",
             "<a class='resource' href='https://addyosmani.com/resources/essentialjsdesignpatterns/book/'>Learning JavaScript Design Patterns</a> (book)": "Free Book about Design patterns in general but with priority on Javascript ones.",
             "<a class='resource' href='https://laracasts.com/series/learning-vue-step-by-step'>Learning Vue 1.0: Step By Step</a>": "Awesome screencasts on vuejs"
         },
         "Intermediate":{
-            "<a class='resource' href='https://github.com/getify/You-Dont-Know-JS'>YouDontKnowJS</a> (book)": "\"This is a series of books diving deep into the core mechanisms of the JavaScript language.\"",
-            "<a class='resource' href='http://play.elevatorsaga.com/'>Elevator Saga The Elevator Programming Game</a> (game)": "Create code to handle elevators"
+            "<a class='resource' target='_blank' href='https://github.com/getify/You-Dont-Know-JS'>YouDontKnowJS</a> (book)": "\"This is a series of books diving deep into the core mechanisms of the JavaScript language.\"",
+            "<a class='resource' target='_blank' href='http://play.elevatorsaga.com/'>Elevator Saga The Elevator Programming Game</a> (game)": "Create code to handle elevators"
         }
     },
     "LISP":
     {
         "Intermediate":{
-            "<a class='resource' href='http://www.gigamonkeys.com/book/'>Practical Common Lisp</a> (book)": "Learning Common Lisp"
+            "<a class='resource' target='_blank' href='http://www.gigamonkeys.com/book/'>Practical Common Lisp</a> (book)": "Learning Common Lisp"
         }
     },
     "PYTHON":
     {
         "Beginner": {
-            "<a class='resource' href='https://docs.python.org/3/tutorial/'>The official python3 tutorial</a>": "The official, free tutorial is recommended if you have some programming experience, but you are new to python itself. It will give you a brief overview of the language, but won't go too deep into details.",
-            "<a class='resource' href='http://www.diveintopython3.net/'>Dive into python3</a>": "Are you an experienced programmer but new to python? Do you dislike the official tutorial? In that case this free book is the go-to recommendation for you.",
+            "<a class='resource' target='_blank' href='https://docs.python.org/3/tutorial/'>The official python3 tutorial</a>": "The official, free tutorial is recommended if you have some programming experience, but you are new to python itself. It will give you a brief overview of the language, but won't go too deep into details.",
+            "<a class='resource' target='_blank' href='http://www.diveintopython3.net/'>Dive into python3</a>": "Are you an experienced programmer but new to python? Do you dislike the official tutorial? In that case this free book is the go-to recommendation for you.",
             "<a class='resource' href='https://automatetheboringstuff.com/'>Automate the boring stuff with python</a>": "This book will teach you the basics of python programming. You'll be able to write small programs that will automate tedius everyday tasks. The book is free and also has a video-course (first half is free on youtube). No prior programming experience required."
         },
         "Intermediate": {
-            "<a class='resource' href='http://www.amazon.com/Fluent-Python-Luciano-Ramalho/dp/1491946008'>Fluent Python</a>": "Once you understand the basics of python, you should understand its idioms and best practices. The first half of the book will introduce you python's data structures, with internal implementation details. The 2nd half goes into more depth with iterators, generators, coroutines and even metaprogramming.",
-            "<a class='resource' href='http://www.amazon.com/Python-Cookbook-Third-David-Beazley/dp/1449340377'>Python Cookbook (3e)</a>": "As the name suggests it's a general cookbook that also covers more advanced recipes and highlights features from python3. Altho we suggest you read the book, because it's great, the receips are available for free on <a href='https://github.com/dabeaz/python-cookbook'><i>Beazley's github page</i></a>"
+            "<a class='resource' target='_blank' href='http://www.amazon.com/Fluent-Python-Luciano-Ramalho/dp/1491946008'>Fluent Python</a>": "Once you understand the basics of python, you should understand its idioms and best practices. The first half of the book will introduce you python's data structures, with internal implementation details. The 2nd half goes into more depth with iterators, generators, coroutines and even metaprogramming.",
+            "<a class='resource' target='_blank' href='http://www.amazon.com/Python-Cookbook-Third-David-Beazley/dp/1449340377'>Python Cookbook (3e)</a>": "As the name suggests it's a general cookbook that also covers more advanced recipes and highlights features from python3. Altho we suggest you read the book, because it's great, the receips are available for free on <a href='https://github.com/dabeaz/python-cookbook'><i>Beazley's github page</i></a>"
         },
         "Challenges": {
-            "<a class='resource' href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make a cron-like scheduler",
-            "<a class='resource' href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
-            "<a class='resource' href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI (Web Server Gateway Interface) web framework",
-            "<a class='resource' href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
+            "<a class='resource' target='_blank' href='https://gist.github.com/raylu/69f4acd1fc094c66ba73'>Cron</a> (by raylu)": "Make a cron-like scheduler",
+            "<a class='resource' target='_blank' href='https://www.raylu.net/httpd.txt'>HTTP server</a> (by raylu)": "Make an HTTP server",
+            "<a class='resource' target='_blank' href='https://gist.github.com/raylu/a239b9f32aa1735ae42f'>Web Server Gateway Interface</a> (by raylu)": "Make a WSGI (Web Server Gateway Interface) web framework",
+            "<a class='resource' target='_blank' href='https://gist.github.com/raylu/5c6d570ae186f963ad2d'>Shell</a> (by raylu)": "Make a shell"
         }
     },
     "SQL":
     {
         "Beginner": {
-            "<a class='resource' href='http://sql.learncodethehardway.org/book/'>Learn SQL The Hard Way</a> (book)": "The book uses SQLite3 but can be used with any version of SQL to learn how to create and manipulate relational databases.",
-            "<a class='resource' href='http://sqlbolt.com/'>SQLBolt Introduction to SQL</a>": "Interactive tutorial on SQL."
+            "<a class='resource' target='_blank' href='http://sql.learncodethehardway.org/book/'>Learn SQL The Hard Way</a> (book)": "The book uses SQLite3 but can be used with any version of SQL to learn how to create and manipulate relational databases.",
+            "<a class='resource' target='_blank' href='http://sqlbolt.com/'>SQLBolt Introduction to SQL</a>": "Interactive tutorial on SQL."
         }
     },
     "VIM":
     {
         "Begginer": {
-            "<a class='resource' href='http://vim-adventures.com/'>Vim Adventures</a> (game)": "Interactive browser game to learn Vim"
+            "<a class='resource' target='_blank' href='http://vim-adventures.com/'>Vim Adventures</a> (game)": "Interactive browser game to learn Vim"
         }
     },
     "WEB":
     {
         "GENERAL": {
-            "<a class='resource' href='https://www.theodinproject.com/'>The Odin Project</a>": "\"Learn Web Development for Free\"",
-            "<a class='resource' href='https://'www.codeupstart.com/'>CodeUpStart</a>": "\"Learn to code by creating real startups\""}
+            "<a class='resource' target='_blank' href='https://www.theodinproject.com/'>The Odin Project</a>": "\"Learn Web Development for Free\"",
+            "<a class='resource' target='_blank' href='https://'www.codeupstart.com/'>CodeUpStart</a>": "\"Learn to code by creating real startups\""}
     }
 }
