@@ -2,7 +2,7 @@
     "GENERAL":
     {
         "Challenges":{
-            "<a class='resource' target='_blank' href='http://adventofcode.com/'>Advent of Code</a>": "A lot of nteresting programming puzzles. (Beginner-Intermediate)"
+            "<a class='resource' target='_blank' href='http://adventofcode.com/'>Advent of Code</a>": "A lot of interesting programming puzzles. (Beginner-Intermediate)"
         },
         "Books":{
             "<a class='resource' target='_blank' href='https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md'>free-programming-books</a>": "A loooong list of free books to learn about a lot of programming subjects."
@@ -18,7 +18,7 @@
     },
     "C#": {
         "Beginner": {
-            "<a class='resource' target='_blank' href='https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx'>MSDN</a> (by raylu)": "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples.",
+            "<a class='resource' target='_blank' href='https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx'>MSDN</a>": "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples.",
             "<a class='resource' target='_blank' href='http://www.csharpcourse.com/'>C# Yellow Book</a>": "If for some reason you are obsessed with books and/or hate the MSDN site you should try the Yellow Book. Make sure you also grab the course slides and use them together with the book!",
             "<a class='resource' target='_blank' href='http://www.amazon.com/C-Depth-3rd-Jon-Skeet/dp/161729134X'>C# in Depth</a>": "The book assumes you have some experience with either C# or a similar language (java, c++). It highlights the new features and possibilities of C# 5."
         },
