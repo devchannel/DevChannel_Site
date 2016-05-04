@@ -6,30 +6,19 @@
     <div class="row">
         <h1 id="title">Resources</h1>
     </div>
-<!--
-    <div class="row">
-        <div class="announcement_container">
-            <div class="row posters_name">
-                <h4>W I P</h4>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="announcement">Work in progress :)</p>
-                </div>
-            </div>
-        </div>
-    </div>
--->
+    
     {% for language, val in link.items() %}
     <div class="row">
-        <a href="#{{ language|replace("#", "_") }}" data-toggle="collapse" class="resource_language">{{ language }}</a>
-        <div id="{{ language|replace("#", "_") }}" class="collapse">
+        <a href="#{{ language|replace('#', '_') }}" data-toggle="collapse" class="resource_language">{{ language }}</a>
+        <div id="{{ language|replace('#', '_') }}" class="collapse">
             {% for p_title, resources in val.items() %}
             <ul>
                 <li>{{ p_title }}
                     <ul>
-                        {% for title, description in resources.items() %}
-                        <li>{{ title|safe }} - {{ description|safe }}</li>
+                        {% for title, (link, description) in resources.items() %}
+                        <li>
+                            <a class="resource" target="_blank" rel="noopener noreferrer" href="{{ link }}">{{ title }}</a> - {{ description }}
+                        </li>
                         {% endfor %}
                     </ul>
                 </li>
