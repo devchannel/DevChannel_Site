@@ -17,7 +17,7 @@
                     <ul>
                         {% for title, (link, description) in resources.items() %}
                         <li>
-                            <a class="resource" target="_blank" rel="noopener noreferrer" href="{{ link }}">{{ title }}</a> - {{ description }}
+                            <a class="resource" target="_blank" rel="noopener noreferrer" href="{{ link }}">{{ title }}</a> - {{ description|safe }}
                         </li>
                         {% endfor %}
                     </ul>
