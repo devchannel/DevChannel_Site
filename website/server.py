@@ -42,14 +42,29 @@ def resources():
 @app.route('/members')
 def members():
     order = flask.request.args.get('order', '')
-    if order == '': order = 'alpha'
+    lang = flask.request.args.get('lang')
     users = []
     all_users = json.loads(database.get_all_users())
     if all_users['ok']:
         for user in all_users['response']:
-            users.append([user['username'], user['points'], user['skills'], 'Not Available'])
+            users.append([user['username'], user['skills'], user['points'], 'Not Available'])
         if order == 'points':
-            users = sorted(users, key=lambda x: x[1], reverse=True)
+            users = sorted(users, key=lambda x: x[2], reverse=True)
+        elif lang is not None:
+            lang_yes = []
+            lang_no = []
+            for user in users:
+                if lang.lower() in user[1].lower():
+                    lang_yes.append(user)
+                else:
+                    lang_no.append(user)
+            if order == 'points':
+                lang_yes = sorted(lang_yes, key=lambda x: x[2], reverse=True)
+                lang_no = sorted(lang_no, key=lambda x: x[2], reverse=True)
+            else:
+                lang_yes = sorted(lang_yes, key=lambda x: x[0])
+                lang_no = sorted(lang_no, key=lambda x: x[0])
+            users = lang_yes + lang_no
         else:
             users = sorted(users, key=lambda x: x[0])
         return flask.render_template('members.html', members=users)
