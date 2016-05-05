@@ -1,0 +1,204 @@
+{
+    "GENERAL":
+    {
+        "Challenges":{
+            "Advent of Code": [
+                "http://adventofcode.com/",
+                "A lot of interesting programming puzzles. (Beginner-Intermediate)"
+            ]
+        },
+        "Books":{
+            "free-programming-books": [
+                "https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md",
+                "A loooong list of free books to learn about a lot of programming subjects."
+            ]
+        },
+        "Tips":{
+            "f.lux": [
+                "https://justgetflux.com/",
+                "It makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day."
+            ]
+        }
+    },
+    "C": {
+        "Beginner": {
+            "C Programming": [
+                "https://en.wikibooks.org/wiki/C_Programming",
+                "Great Openbook on C"
+            ]
+        }
+    },
+    "C#": {
+        "Beginner": {
+            "MSDN": [
+                "https://msdn.microsoft.com/en-us/library/aa287558(v=vs.71).aspx",
+                "When it comes to C# your learning resource should be MSDN. The documentation is huge. It won't just cover the language itself, but also IDEs, best practices and tons of code examples."
+            ],
+            "C# Yellow Book": [
+                "http://www.csharpcourse.com/",
+                "If for some reason you are obsessed with books and/or hate the MSDN site you should try the Yellow Book. Make sure you also grab the course slides and use them together with the book!"
+            ],
+            "C# in Depth": [
+                "http://www.amazon.com/C-Depth-3rd-Jon-Skeet/dp/161729134X",
+                "The book assumes you have some experience with either C# or a similar language (java, c++). It highlights the new features and possibilities of C# 5."
+            ]
+        },
+        "Intermediate": {
+            "CLR via C#": [
+                "http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454",
+                "Learn the inns and outs of the Common Language Runtime"
+            ],
+            "Dependency Injection": [
+                "https://msdn.microsoft.com/en-us/library/ff921152.aspx",
+                "You've probably heard of dependency injection already. If you are not using it actively you are missing out on a great feature of the language and should pick it up ASAP!"
+            ]
+        }
+    },
+    "HASKELL":
+    {
+        "Beginner": {
+            "Learn You a Haskell": [
+                "http://learnyouahaskell.com/",
+                "The book will teach you the basics of Haskell and functional programming. It was written for people with some experience in other (non-functional) languages. P.S: Don't let the cover fool you."
+            ],
+            "Real World Haskell": [
+                "http://book.realworldhaskell.org/",
+                "The other go-to recommendation for beginners (I personally recommend this book over Learn You a Haskell). The first 4 or so chapters may feel overwhelming if you've never done functional programming before so don't rush and take your time."
+            ],
+            "Haskell Programming": [
+                "http://haskellbook.com/",
+                "This book targets people without any programming experience. If you want to learn Haskell as your first programming language you should probably try this book instead of the 2 mentioned above. DISCLAIMER: This book is still Work in Progress, but since there is no better resource for complete beginners I included it."
+            ]
+        },
+        "Intermediate": {
+            "Typeclassopedia": [
+                "https://wiki.haskell.org/Typeclassopedia",
+                "If you feel comfortable with Haskell and the standard library, Typeclassopedia is a great place to learn about higher level concepts."
+            ],
+            "Basic Category Theory": [
+                "http://www.amazon.com/dp/0262660717/?tag=stackoverfl08-20",
+                "This book is surprisingly about... category theory. If you don't want to buy the book (which is absolutely worth the it btw) check out the author's shorter article at http://repository.cmu.edu/cgi/viewcontent.cgi?article=2846&context=compsci."
+            ]
+        }
+    },
+    "JAVASCRIPT":
+    {
+        "Beginner": {
+            "EloquentJS": [
+                "http://eloquentjavascript.net/",
+                "Free Book explaining fundamentals of programming and Js, gets difficult after time."
+            ],
+            "Automate your tasks easily using Gulp.js": [
+                "https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js",
+                "Nice tutorial on how to begin using Gulp"
+            ],
+            "Learning JavaScript Design Patterns (book)": [
+                "https://addyosmani.com/resources/essentialjsdesignpatterns/book/",
+                "Free Book about Design patterns in general but with priority on Javascript ones."
+            ],
+            "Learning Vue 1.0: Step By Step": [
+                "https://laracasts.com/series/learning-vue-step-by-step",
+                "Awesome screencasts on vuejs"
+            ]
+        },
+        "Intermediate": {
+            "YouDontKnowJS": [
+                "https://github.com/getify/You-Dont-Know-JS",
+                "\"This is a series of books diving deep into the core mechanisms of the JavaScript language.\""
+            ],
+            "Elevator Saga The Elevator Programming Game": [
+                "http://play.elevatorsaga.com/",
+                "Create code to handle elevators"
+            ]
+        }
+    },
+    "LISP":
+    {
+        "Intermediate": {
+            "Practical Common Lisp": [
+                "http://www.gigamonkeys.com/book/",
+                "Learning Common Lisp"
+            ]
+        }
+    },
+    "PYTHON":
+    {
+        "Beginner": {
+            "The official python3 tutorial": [
+                "https://docs.python.org/3/tutorial/",
+                "The official, free tutorial is recommended if you have some programming experience, but you are new to python itself. It will give you a brief overview of the language, but won't go too deep into details."
+            ],
+            "Dive into python3": [
+                "http://www.diveintopython3.net/",
+                "Are you an experienced programmer but new to python? Do you dislike the official tutorial? In that case this free book is the go-to recommendation for you."
+            ],
+            "Automate the boring stuff with python": [
+                "https://automatetheboringstuff.com/",
+                "This book will teach you the basics of python programming. You'll be able to write small programs that will automate tedius everyday tasks. The book is free and also has a video-course (first half is free on youtube). No prior programming experience required."
+            ]
+        },
+        "Intermediate": {
+            "Fluent Python": [
+                "http://www.amazon.com/Fluent-Python-Luciano-Ramalho/dp/1491946008",
+                "Once you understand the basics of python, you should understand its idioms and best practices. The first half of the book will introduce you python's data structures, with internal implementation details. The 2nd half goes into more depth with iterators, generators, coroutines and even metaprogramming."
+            ],
+            "Python Cookbook (3e)": [
+                "http://www.amazon.com/Python-Cookbook-Third-David-Beazley/dp/1449340377",
+                "As the name suggests it's a general cookbook that also covers more advanced recipes and highlights features from python3. Altho we suggest you read the book, because it's great, the receips are available for free on <a href='https://github.com/dabeaz/python-cookbook'><i>Beazley's github page</i></a>"
+            ]
+        },
+        "Challenges": {
+            "Cron (by raylu)": [
+                "https://gist.github.com/raylu/69f4acd1fc094c66ba73",
+                "Make a cron-like scheduler"
+            ],
+            "HTTP server (by raylu)": [
+                "https://www.raylu.net/httpd.txt",
+                "Make an HTTP server"
+            ],
+            "Web Server Gateway Interface (by raylu)": [
+                "https://gist.github.com/raylu/a239b9f32aa1735ae42f",
+                "Make a WSGI (Web Server Gateway Interface) web framework"
+            ],
+            "Shell (by raylu)": [
+                "https://gist.github.com/raylu/5c6d570ae186f963ad2d",
+                "Make a shell"
+            ]
+        }
+    },
+    "SQL":
+    {
+        "Beginner": {
+            "Learn SQL The Hard Way": [
+                "http://sql.learncodethehardway.org/book/",
+                "The book uses SQLite3 but can be used with any version of SQL to learn how to create and manipulate relational databases."
+            ],
+            "SQLBolt Introduction to SQL": [
+                "http://sqlbolt.com/",
+                "Interactive tutorial on SQL."
+            ]
+        }
+    },
+    "VIM":
+    {
+        "Beginner": {
+            "Vim Adventures": [
+                "http://vim-adventures.com/",
+                "Interactive browser game to learn Vim"
+            ]
+        }
+    },
+    "WEB":
+    {
+        "GENERAL": {
+            "The Odin Project": [
+                "http://www.theodinproject.com/",
+                "\"Learn Web Development for Free\""
+            ],
+            "CodeUpStart": [
+                "https://www.codeupstart.com/",
+                "\"Learn to code by creating real startups\""
+            ]
+        }
+    }
+}
