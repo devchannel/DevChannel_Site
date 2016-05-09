@@ -1,6 +1,9 @@
 import os
 import json
 from collections import OrderedDict
+import collections
+from itertools import filterfalse, tee
+from operator import attrgetter
 
 import flask
 import requests
@@ -11,6 +14,8 @@ from .apps import invite, database, article
 from . import app
 
 cache = SimpleCache()
+
+User = collections.namedtuple('User', 'username skills points last_seen')
 
 
 @app.route('/')
@@ -39,34 +44,29 @@ def resources():
         cache.set('resources', res, timeout=1800)  # 30 mins timeout
     return flask.render_template('resources.html', link=res)
 
+
 @app.route('/members')
 def members():
-    order = flask.request.args.get('order', '')
-    lang = flask.request.args.get('lang')
-    users = []
+    order = flask.request.args.get('order')
+    lang = flask.request.args.get('lang', '').lower()
+
     all_users = json.loads(database.get_all_users())
     if all_users['ok']:
-        for user in all_users['response']:
-            users.append([user['username'], user['skills'], user['points'], 'Not Available'])
+        users = [User(username=user['username'], skills=user['skills'], points=user['points'], last_seen='Not Available')
+                 for user in all_users['response']]
+
         if order == 'points':
-            users = sorted(users, key=lambda x: x[2], reverse=True)
-        elif lang is not None:
-            lang_yes = []
-            lang_no = []
-            for user in users:
-                if lang.lower() in user[1].lower():
-                    lang_yes.append(user)
-                else:
-                    lang_no.append(user)
-            if order == 'points':
-                lang_yes = sorted(lang_yes, key=lambda x: x[2], reverse=True)
-                lang_no = sorted(lang_no, key=lambda x: x[2], reverse=True)
-            else:
-                lang_yes = sorted(lang_yes, key=lambda x: x[0])
-                lang_no = sorted(lang_no, key=lambda x: x[0])
-            users = lang_yes + lang_no
+            users.sort(key=attrgetter('points'), reverse=True)
         else:
-            users = sorted(users, key=lambda x: x[0])
+            users.sort(key=attrgetter('username'))
+
+        if lang:
+            t1, t2 = tee(users)
+            lang_yes = filter(lambda user: lang in user.skills.lower(), t1)
+            lang_no = filterfalse(lambda user: lang in user.skills.lower(), t2)
+
+            users = list(lang_yes) + list(lang_no)
+
         return flask.render_template('members.html', members=users)
     # return Idk what to put here
 
