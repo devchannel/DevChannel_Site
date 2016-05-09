@@ -62,7 +62,7 @@ def _database():
     if flask.session.get('username') not in server_config.ALLOWED_USERS:
         flask.abort(403)
 
-    args = {var_name: flask.request.args.get(var_name, '')
+    args = {var_name: flask.request.args.get(var_name, '').lower()
             for var_name in ('email', 'username', 'slack_id', 'github', 'skills', 'timezone', 'points')}
 
     if flask.request.method == 'POST':
