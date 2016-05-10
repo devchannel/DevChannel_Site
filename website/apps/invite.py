@@ -46,12 +46,13 @@ def send_invite(email, skills):
     # remove all whitespace hack, then lowercase and split by ,
     languages = ''.join(skills.split()).lower().split(',')
 
-    join_these = ','.join(lang_channels[lang] for lang in languages if lang in lang_channels)
+    channels = ','.join(lang_channels[lang] for lang in languages if lang in lang_channels)
+    channels = channels + ',' + invite_config.AUTO_JOIN_CHANNELS
 
     response = requests.post(invite_config.SLACK_INV_URL,
                              params={
                                  'token': invite_config.TOKEN,
-                                 'channels': join_these + invite_config.AUTO_JOIN_CHANNELS,
+                                 'channels': channels.lstrip(','),
                                  't': round(time.time()),
                                  'email': email,
                                  'first_name': '',
