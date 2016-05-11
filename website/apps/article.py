@@ -1,3 +1,4 @@
+import os
 import datetime
 from functools import singledispatch
 from collections import abc
@@ -5,7 +6,7 @@ import html
 
 import tinydb
 
-db = tinydb.TinyDB('website/database/articles.json')
+db = tinydb.TinyDB(os.path.join(os.path.dirname(__file__), '..', 'database/articles.json'))
 
 
 class Article:

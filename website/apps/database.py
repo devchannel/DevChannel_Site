@@ -1,8 +1,9 @@
+import os
 import json
 
 from tinydb import TinyDB, Query
 
-db = TinyDB('website/database/users.json')
+db = TinyDB(os.path.join(os.path.dirname(__file__), '..', 'database/users.json'))
 User = Query()
 
 
