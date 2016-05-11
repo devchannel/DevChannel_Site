@@ -1,5 +1,7 @@
-TOKEN = "xoxp-16043308483-16043308499-17513835073-30b3277d73"
-SLACK_INV_URL = "https://devchannel.slack.com/api/users.admin.invite"
+import os
+
+TOKEN = os.environ.get('SLACK_TOKEN', '')
+SLACK_INV_URL = "https://api.slack.com/api/users.admin.invite"
 AUTO_JOIN_CHANNELS = "C0H0Q0J3D,C0G16K1M2,C0H0MG1FW,C0H0MG0F6,C0H0SR41G,C0H0SR40J"
 
 CH_PYTHON = 'C0H0T0EUE'
