@@ -34,3 +34,6 @@ apps/__pycache__
 
 #netbeans files
 .idea/
+
+# virtual environments:
+env/
