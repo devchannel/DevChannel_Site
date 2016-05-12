@@ -73,7 +73,7 @@ def members():
 
     return flask.render_template('members.html', members=users)
 
-
+'''
 @app.route('/members')
 def members():
     all_users = json.loads(database.get_all_users())
@@ -99,7 +99,7 @@ def members():
         users = list(lang_yes) + list(lang_no)
 
     return flask.render_template('members.html', members=users)
-
+'''
 
 @app.route('/join', methods=['GET', 'POST'])
 def join():
