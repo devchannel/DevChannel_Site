@@ -156,6 +156,9 @@ def parse(txt):
                 resp.append(line)
             else:
                 resp[-1] += '\n' + line
+
+    resp[0] = resp[0][1:]  # delete leading "\n"
+
     return resp
 
 
