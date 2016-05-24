@@ -251,6 +251,14 @@ ul.sections,
   padding-bottom: 4px;
 }
 
+.search_box {
+  font-size: 15px;
+}
+
+.search_box input{
+  //float: left;
+}
+
 .announcement_container,
 .form-container {
   background-color: white;

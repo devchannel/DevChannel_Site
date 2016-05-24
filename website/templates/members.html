@@ -4,16 +4,30 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-xs-6">
-            <h1 id="title">Members</h1>
-        </div>
-        <div class="col-xs-6">
-            <div class="search_box pull-right">
-                <form action='#' method='get'>
-                    Search by language: <input name='lang'></input>
-                </form>
-            </div>
-        </div>
+        <!--<div class="col-xs-6">-->
+            <h1 id="title">
+                Members
+                <div class="row">
+	                <div class="search_box form-group pull-right col-xs-6">
+	                    <form action='' method='get'>
+	                        Search by language: <input class="form-control" name='lang' placeholder="Python"></input>
+	                        <input type="submit" value="Search">
+	                    </form>
+	                </div>
+	            </div>
+            </h1>
+        <!--</div>-->
+        <!--<div class="col-xs-6">
+            
+        </div>-->
+    </div>
+    <div class="row">
+    <div class="row">
+        <select id="order_dropdown">
+            <option value="alpha">Alphabetically</option>
+            <option value="pnts">Points</option>
+            <option value="smth">Something</option>
+        </select>
     </div>
     <div class="row">
     </div>
