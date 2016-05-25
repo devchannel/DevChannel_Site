@@ -23,7 +23,7 @@ a:hover {
 .resource_language {
   height: 32px;
   line-height: 32px;
-  background-color: #FFFFFF;
+  background-color: #072B40;
   border: 1px solid #CCCCCC;
   display: inline-block;
   width: 100%;
@@ -32,6 +32,7 @@ a:hover {
   position: relative;
   color: #444444;
   transition: 0.1s all;
+  color: white;
 }
 .resource_language:before {
   content: "\f067";
@@ -282,6 +283,7 @@ ul.sections,
 
 .posters_name {
     padding: 10px 0 0 10px;
+    margin-bottom: 10px;
     background: #072B40;
     color: white;
 }
@@ -289,6 +291,10 @@ ul.sections,
 .announcement {
   font-weight: normal;
   font-size: 1.20em;
+}
+
+kbd {
+  background-color: #1AADFF;
 }
 
 /* Join */
