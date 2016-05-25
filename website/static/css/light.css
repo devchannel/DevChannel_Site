@@ -23,7 +23,7 @@ a:hover {
 .resource_language {
   height: 32px;
   line-height: 32px;
-  background-color: #072B40;
+  background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
   display: inline-block;
   width: 100%;
@@ -32,7 +32,6 @@ a:hover {
   position: relative;
   color: #444444;
   transition: 0.1s all;
-  color: white;
 }
 .resource_language:before {
   content: "\f067";
