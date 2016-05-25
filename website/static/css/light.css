@@ -282,6 +282,7 @@ ul.sections,
 
 .posters_name {
     padding: 10px 0 0 10px;
+    margin-bottom: 10px;
     background: #072B40;
     color: white;
 }
@@ -289,6 +290,10 @@ ul.sections,
 .announcement {
   font-weight: normal;
   font-size: 1.20em;
+}
+
+kbd {
+  background-color: #1AADFF;
 }
 
 /* Join */
