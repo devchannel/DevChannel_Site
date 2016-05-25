@@ -51,7 +51,7 @@ def join():
         if email == '' or skills == '':
             redir, resp = -1, 'Please fill every field!'
         else:
-            redir, resp = invite.send_invite(email, skills)
+            redir, resp = invite.send_invite(email.lower(), skills)
 
         return flask.render_template('join.html', status=redir, rep_error=resp)
     else:
