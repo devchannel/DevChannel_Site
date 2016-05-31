@@ -7,11 +7,16 @@ function get_by_order (){
             var pair = vars[i].split('=');
             params[pair[0]] = decodeURIComponent(pair[1]);
         }
+        return params
     }();
 
-    document.getElementById("order_dropdown");
+    console.log("url params:", url_params);
+    console.log("l:", url_params['l'])
+
+    var order = document.getElementById("order_dropdown").value;
     
-    req_url = 'members?' + 't=' + Math.random()
+    req_url = 'members?' + 't=' + Math.random() + '&' + 'order=' + order
+    console.log(req_url)
 
     var xhttp;
     if (window.XMLHttpRequest) {
@@ -23,7 +28,12 @@ function get_by_order (){
 
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log(xhttp.responseText.getElementById("order_dropdown"));
+            var parser = new DOMParser()
+            , doc = parser.parseFromString(xhttp.responseText, "text/html");
+            var newTable = doc.getElementsByClassName("members_table")[0];
+            var oldTable = document.getElementsByClassName("members_table")[0];
+            oldTable.parentNode.replaceChild(newTable, oldTable)
+            console.log(newTable);
         }
     }
 
