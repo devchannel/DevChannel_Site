@@ -8,10 +8,11 @@
             <h1 id="title">
                 Members
                 <div class="row">
-	                <div class="search_box form-group pull-right col-xs-6">
-	                    <form action='' method='get'>
-	                        Search by language: <input class="form-control" name='lang' placeholder="Python"></input>
-	                        <input type="submit" value="Search">
+	                <div class="search_box form-group pull-right col-xs-6"><!--
+	                    <form action='' method='get'>-->
+                        <form>
+	                        Search by language: <input id="member_search_box" class="form-control" name='lang' placeholder="Python"></input>
+	                        <input id="search_button" type="button" onclick="search_lang(); return false;" value="Search">
 	                    </form>
 	                </div>
 	            </div>
@@ -53,4 +54,12 @@
             </div>
         </div>
     </div>
+
+    <!--<script>
+    document.getElementById("search_button").addEventListener('click', function (e) {
+    e.preventDefault();
+    search_lang();
+    console.log("YAY");
+})
+    </script>-->
 {% endblock %}

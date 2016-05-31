@@ -17,8 +17,6 @@ cache = SimpleCache()
 
 User = collections.namedtuple('User', 'username skills points last_seen')
 
-User = collections.namedtuple('User', 'username skills points last_seen')
-
 
 @app.route('/')
 @app.route('/index')
