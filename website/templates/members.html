@@ -5,31 +5,28 @@
 {% block content %}
     <div class="row">
         <!--<div class="col-xs-6">-->
-            <h1 id="title">
-                Members
-                <div class="row">
-	                <div class="search_box form-group pull-right col-xs-6"><!--
-	                    <form action='' method='get'>-->
-                        <form>
-	                        Search by language: <input id="member_search_box" class="form-control" name='lang' placeholder="Python"></input>
-	                        <input id="search_button" type="button" onclick="search_lang(); return false;" value="Search">
-	                    </form>
-	                </div>
-	            </div>
-            </h1>
+            <h1 id="title">Members</h1>
+            <div class="row">
+                <div class="search_box form-group pull-right col-xs-6"><!--
+                    <form action='' method='get'>-->
+                    <form>Search by language:
+                        <input id="member_search_box" class="form-control" name='lang' placeholder="Python">
+                        <input id="search_button" type="button" onclick="search_lang(); return false;" value="Search">
+                    </form>
+                </div>
+            </div>
         <!--</div>-->
         <!--<div class="col-xs-6">
             
         </div>-->
     </div>
-    <div class="row">
+
+<div class="row">
     <div class="row">
         <select id="order_dropdown" onchange="get_by_order()">
             <option value="alpha">Alphabetically</option>
             <option value="points">Points</option>
         </select>
-    </div>
-    <div class="row">
     </div>
     <div class="row">
         <div class="members_container">
@@ -41,19 +38,21 @@
                             <th>LANGUAGES</th>
                             <th>POINTS</th>
                             <th>LAST SEEN</th>
+                        </tr>
                         {% for member in members %}
-                            <tr>
-                                <td>{{ "{}".format(member[0]) }}</td>
-                                <td>{{ "{}".format(member[1]) }}</td>
-                                <td>{{ "{}".format(member[2]) }}</td>
-                                <td>{{ "{}".format(member[3]) }}</td>
-                            </tr>
+                        <tr>
+                            <td>{{ member.username }}</td>
+                            <td>{{ member.skills }}</td>
+                            <td>{{ member.points }}</td>
+                            <td>{{ member.last_seen }}</td>
+                        </tr>
                         {% endfor %}
                     </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!--<script>
     document.getElementById("search_button").addEventListener('click', function (e) {

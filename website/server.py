@@ -1,7 +1,6 @@
 import os
 import json
 import collections
-from collections import OrderedDict
 from itertools import filterfalse, tee
 from operator import attrgetter
 
@@ -40,7 +39,7 @@ def resources():
     res = cache.get('resources')
     if not res:
         with open(os.path.join(os.path.dirname(__file__), 'database/resources.json')) as f:
-            res = json.loads(f.read(), object_pairs_hook=OrderedDict)
+            res = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
         cache.set('resources', res, timeout=1800)  # 30 mins timeout
     return flask.render_template('resources.html', link=res)
 
