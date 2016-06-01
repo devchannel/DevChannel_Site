@@ -46,4 +46,12 @@
         </div>
     </div>
 </div>
+<!--Temporary bandaid-->
+<script>
+    $("form").submit(function (e) {
+        e.preventDefault();
+        search_lang();
+        return false;
+    });
+</script>
 {% endblock %}
