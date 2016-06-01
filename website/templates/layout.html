@@ -55,7 +55,7 @@
                         <a href="join" class="join-text">Join us</a>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-2 list-position-control">
+                        <div class="col-md-offset-2 list-position-control">
                             <ul class="sections">
                                 {% for href, id, text in navlinks %}
                                 <li><a href="{{ href|e }}" {% if id==activepage %} class="active" {% endif %}>{{ text|e }}</a></li>
