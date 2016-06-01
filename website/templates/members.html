@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% set activepage = "members" %}
 {% block title %}Members{% endblock %}
+{% block head %}
+    {{ super() }}
+    <script type="text/javascript" src="static/js/members-search.js"></script>
+{% endblock %}
 
 {% block content %}
 <div class="row">
