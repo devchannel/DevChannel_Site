@@ -8,61 +8,42 @@
 
 {% block content %}
 <div class="row">
-    <!--<div class="col-xs-6">-->
-        <h1 id="title">Members</h1>
-        <div class="row">
-            <div class="search_box form-group pull-right col-xs-6"><!--
-                <form action='' method='get'>-->
-                <form>Search by language:
-                    <input id="member_search_box" class="form-control" name='lang' placeholder="Python">
-                    <input id="search_button" type="button" onclick="search_lang(); return false;" value="Search">
-                </form>
-            </div>
-        </div>
-    <!--</div>-->
-    <!--<div class="col-xs-6">
-
-    </div>-->
+    <!--TODO: title CCS inline, just experimenting, will remove it later G4S-->
+    <h1 id="title" style="float: left; width: 50%;">Members</h1>
+    <div class="search_box form-group pull-right col-xs-6">
+        <form>Search by language:
+            <input id="member_search_box" class="form-control" name='lang' placeholder="Python">
+            <input id="search_button" type="button" onclick="search_lang(); return false;" value="Search">
+        </form>
+    </div>
+    <select id="order_dropdown" onchange="search_lang()">
+        <option value="alpha">Alphabetically</option>
+        <option value="points">Points</option>
+    </select>
 </div>
 
 <div class="row">
-    <div class="row">
-        <select id="order_dropdown" onchange="search_lang()">
-            <option value="alpha">Alphabetically</option>
-            <option value="points">Points</option>
-        </select>
-    </div>
-    <div class="row">
-        <div class="members_container">
-            <div class="row">
-                <div class="col-md-12">
-                    <table class="members_table">
-                        <tr>
-                            <th>USERNAME</th>
-                            <th>LANGUAGES</th>
-                            <th>POINTS</th>
-                            <th>LAST SEEN</th>
-                        </tr>
-                        {% for member in members %}
-                        <tr>
-                            <td>{{ member.username }}</td>
-                            <td>{{ member.skills }}</td>
-                            <td>{{ member.points }}</td>
-                            <td>{{ member.last_seen }}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </div>
+    <div class="members_container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="members_table">
+                    <tr>
+                        <th>USERNAME</th>
+                        <th>LANGUAGES</th>
+                        <th>POINTS</th>
+                        <th>LAST SEEN</th>
+                    </tr>
+                    {% for member in members %}
+                    <tr>
+                        <td>{{ member.username }}</td>
+                        <td>{{ member.skills }}</td>
+                        <td>{{ member.points }}</td>
+                        <td>{{ member.last_seen }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div>
     </div>
 </div>
-
-    <!--<script>
-    document.getElementById("search_button").addEventListener('click', function (e) {
-    e.preventDefault();
-    search_lang();
-    console.log("YAY");
-})
-    </script>-->
 {% endblock %}
