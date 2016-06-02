@@ -157,38 +157,6 @@ def auth():
     return 'Something went wrong'
 
 
-@app.route('/_upload', methods=['GET', 'POST'])
-@views.must_login
-def _upload():
-    if flask.request.method == 'POST':
-        author = flask.request.form['author']
-        text = flask.request.form['text']
-        text = parse(text)
-        article.save_article(article.Article(author, text))
-        return 'Done'
-    return flask.render_template('_upload.html')
-
-
-def parse(txt):
-    txt = txt.split('\r\n')
-    resp = ['']
-    for line in txt:
-        if line.startswith('    '):
-            if isinstance(resp[-1], str):
-                resp.append([line[4:]])
-            else:
-                resp[-1].append(line[4:])
-        else:
-            if isinstance(resp[-1], list):
-                resp.append(line)
-            else:
-                resp[-1] += '\n' + line
-
-    resp[0] = resp[0][1:]  # delete leading "\n"
-
-    return resp
-
-
 @app.errorhandler(403)
 @app.errorhandler(404)
 @app.errorhandler(500)

@@ -20,7 +20,3 @@ class Article:
 
 def get_articles():
     return db.all()
-
-
-def save_article(obj):
-    db.insert(obj.__dict__)
