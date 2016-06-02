@@ -1,12 +1,18 @@
 from urllib.parse import urlparse, urlunparse
 import flask
 from flaskext.markdown import Markdown
+from flask_sqlalchemy import SQLAlchemy
 
 from . import server_config
 
 app = flask.Flask(__name__)
-Markdown(app)
 app.secret_key = server_config.SERVER_SECRET
+
+Markdown(app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 from .server import *
 

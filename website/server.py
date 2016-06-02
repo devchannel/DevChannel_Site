@@ -9,7 +9,8 @@ import requests
 from werkzeug.contrib.cache import SimpleCache
 
 from . import server_config
-from .utils import invite, database, article, views
+from .utils import invite, database, views
+from .models.posts import Post
 from . import app
 
 cache = SimpleCache()
@@ -20,7 +21,7 @@ User = collections.namedtuple('User', 'username skills points last_seen')
 @app.route('/')
 @app.route('/index')
 def index():
-    articles = [article.Article(**params)for params in article.get_articles()]
+    articles = Post.query.all()
     return flask.render_template('index.html', articles=reversed(articles))
 
 
