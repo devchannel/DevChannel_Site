@@ -3,8 +3,9 @@
 ### Dependencies
   1. Python 3
   2. Flask
-  3. Requests
-  4. tinydb
+  3. Flask-Markdown
+  4. Requests
+  5. tinydb
 
 ### Installation
   * If you have conda installed: `conda env create -f environment.yml`.

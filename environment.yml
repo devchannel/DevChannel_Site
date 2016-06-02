@@ -8,5 +8,6 @@ dependencies:
 - wheel=0.26.0=py35_1
 - pip:
   - flask==0.10.1
+  - Flask-Markdown==0.3
   - requests==2.9.0
   - tinydb

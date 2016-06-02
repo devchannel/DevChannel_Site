@@ -199,6 +199,3 @@ def page_not_found(error):
         return flask.render_template('errors/404.html'), 404
     elif str(error).startswith('500'):
         return flask.render_template('errors/500.html'), 500
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True, port=3000)
