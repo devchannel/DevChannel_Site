@@ -9,7 +9,7 @@ import requests
 from werkzeug.contrib.cache import SimpleCache
 
 from . import server_config
-from .apps import invite, database, article
+from .utils import invite, database, article, views
 from . import app
 
 cache = SimpleCache()
@@ -90,10 +90,8 @@ def join():
 
 
 @app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
+@views.must_login
 def _database():
-    if flask.session.get('username') not in server_config.ALLOWED_USERS:
-        flask.abort(403)
-
     args = {var_name: flask.request.args.get(var_name, '').lower()
             for var_name in ('email', 'username', 'slack_id', 'github', 'skills', 'timezone', 'points')}
 
@@ -160,10 +158,8 @@ def auth():
 
 
 @app.route('/_upload', methods=['GET', 'POST'])
+@views.must_login
 def _upload():
-    if flask.session.get('username') not in server_config.ALLOWED_USERS:
-        flask.abort(403)
-
     if flask.request.method == 'POST':
         author = flask.request.form['author']
         text = flask.request.form['text']
