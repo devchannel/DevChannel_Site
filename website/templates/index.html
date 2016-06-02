@@ -13,9 +13,8 @@
         <h4>{{ "{} - {}".format(article.author, article.publish_date) }}</h4>
       </div>
       <div class="row">
-        <div class="col-md-12">
-        <!--<p class="announcement"> tag is added by body_to_html-->
-          {{ article.body_to_html()|safe }}
+        <div class="col-md-12 announcement">
+          {{ article.text|markdown }}
         </div>
       </div>
     </div>
