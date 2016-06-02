@@ -5,9 +5,10 @@
   2. Flask
   3. Flask-Markdown
   4. Flask-SQLAlchemy
-  5. Requests
-  6. tinydb
-  7. SQLAlchemy
+  5. Flask-Admin
+  6. Requests
+  7. tinydb
+  8. SQLAlchemy
 
 ### Installation
   * If you have conda installed: `conda env create -f environment.yml`.

@@ -2,6 +2,7 @@ from urllib.parse import urlparse, urlunparse
 import flask
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
+import flask_admin
 
 from . import server_config
 
@@ -14,8 +15,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from .server import *
+from .models.posts import Post
+from .models.admin import AdminPost
+admin = flask_admin.Admin(app, name='ADMIN')
+admin.add_view(AdminPost(Post, db.session))
 
+from .server import *
 
 @app.before_request
 def redir_to_non_www():
