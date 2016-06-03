@@ -1,0 +1,5 @@
+{% extends 'admin/model/edit.html' %}
+{% block head_css %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/flask_admin.css', _external=True) }}">
+{% endblock %}
