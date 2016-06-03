@@ -9,11 +9,11 @@
     <meta name="description" content="A community for beginner and more experienced programmers alike.">
     <title>DevChannel - {% block title %}{% endblock %}</title>
     <!--<script src="static/js/sw-register.js"></script>-->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
-    <link href="static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="static/css/light.css" id="style" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="static/js/jquery.js"></script>
-    <script src="static/js/bootstrap.js"></script>
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/light.css') }}" id="style" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
     {% endblock %}
 </head>
 
@@ -48,7 +48,7 @@
                 <div class="row navthingy">
                     <div class="row">
                         <div class="col-md-2 dev-logo">
-                            <a href="index"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="DevChannel Logo" title="DevChannel Logo" /></a>
+                            <a href="index"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="DevChannel Logo" title="DevChannel Logo" /></a>
                         </div>
                         <div class="col-md-1">
                             <h2 class="text-logo">DevChannel</h2>
@@ -75,7 +75,7 @@
                                 <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
                             </div>
                             <div class="col-sm-2">
-                                <a href="index" class="pull-left"><img src="static/files/images/DevChannelTeamLogo_64.png" alt="<D/C>" class="img-rounded"/></a>
+                                <a href="index" class="pull-left"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="<D/C>" class="img-rounded"/></a>
                             </div>
                         </div>
                     </div>
