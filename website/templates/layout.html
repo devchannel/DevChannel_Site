@@ -38,7 +38,7 @@
                 {% for href, id, text in navlinks %}
                 <li><a href="{{ href|e }}" {% if id==activepage %} class="active" {% endif %}>{{ text|e }}</a></li>
                 {% endfor %}
-                <li><a href="/join" id="join">Join Us!</a></li>
+                <li><a href="{{ url_for('join') }}" id="join">Join Us!</a></li>
             </ul>
         </div>
         {% endblock %}
@@ -50,12 +50,12 @@
                 <div class="row navthingy">
                     <div class="row">
                         <div class="col-md-2 dev-logo">
-                            <a href="index"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="DevChannel Logo" title="DevChannel Logo" /></a>
+                            <a href="{{url_for('index') }}"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="DevChannel Logo" title="DevChannel Logo" /></a>
                         </div>
                         <div class="col-md-1">
                             <h2 class="text-logo">DevChannel</h2>
                         </div>
-                        <a href="join" class="join-text">Join us</a>
+                        <a href="{{ url_for('join') }}" class="join-text">Join us</a>
                     </div>
                     <div class="row">
                         <div class="col-md-offset-2 list-position-control">
@@ -77,7 +77,7 @@
                                 <a href="#" class="ham-icon pull-left" id="menu-toggle"><i class="fa fa-bars"></i></a>
                             </div>
                             <div class="col-sm-2">
-                                <a href="index" class="pull-left"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="<D/C>" class="img-rounded"/></a>
+                                <a href="{{ url_for('index') }}" class="pull-left"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="<D/C>" class="img-rounded"/></a>
                             </div>
                         </div>
                     </div>
