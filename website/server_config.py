@@ -9,3 +9,5 @@ GIT_CLIENT_SECRET = os.environ.get('GIT_SECRET', '')
 
 # server.py consts
 SERVER_SECRET = os.environ.get('SERVER_SECRET', 'topsecret')
+
+HOST_NAME = os.environ.get('HOST_NAME')

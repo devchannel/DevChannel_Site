@@ -13,6 +13,7 @@ Markdown(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SERVER_NAME'] = server_config.HOST_NAME
 db = SQLAlchemy(app)
 
 from .models.posts import Post
