@@ -53,7 +53,7 @@
                             <a href="{{url_for('index') }}"><img src="{{ url_for('static', filename='files/images/DevChannelTeamLogo_64.png') }}" alt="DevChannel Logo" title="DevChannel Logo" /></a>
                         </div>
                         <div class="col-md-1">
-                            <h2 class="text-logo">DevChannel</h2>
+                            <h2 class="text-logo">{% block text_logo %}DevChannel{% endblock %}</h2>
                         </div>
                         <a href="{{ url_for('join') }}" class="join-text">Join us</a>
                     </div>
