@@ -11,11 +11,12 @@
     <div class="row">
       <div class="announcement_container">
         <div class="row posters_name">
-          <h4>{{ "{} - {}".format(article.author, article.publish_date) }}</h4>
+          <h4>{{ article.title|markdown }}</h4>
         </div>
         <div class="row">
           <div class="col-md-12 announcement">
             {{ article.text|markdown }}
+            <i class="pull-right">{{ "{}, {}".format(article.author, article.publish_date) }}</i>
           </div>
         </div>
       </div>
