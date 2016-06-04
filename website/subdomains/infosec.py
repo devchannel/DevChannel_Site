@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template
 
+__all__ = ['infosec']
+
 infosec = Blueprint('infosec', __name__, subdomain='infosec')
 
 

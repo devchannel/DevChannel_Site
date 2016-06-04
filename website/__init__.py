@@ -32,5 +32,8 @@ def redir_to_non_www():
         k = urlunparse(url_parts)
         return flask.redirect(k, code=301)
 
-from .subdomains.infosec import infosec
-app.register_blueprint(infosec)
+from website import subdomains
+for attr in dir(subdomains):
+    if not attr.startswith('__'):
+        bprint = getattr(subdomains, attr)
+        app.register_blueprint(bprint)
