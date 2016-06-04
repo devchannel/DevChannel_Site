@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% set navlinks = [
-            ('/', 'index', 'Home'),
-            ('/demo', 'demo', 'Demo')
+            (url_for('.index'), 'index', 'Home'),
+            (url_for('.demo'), 'demo', 'Demo')
         ] %}
 {% block subtitle %}/Infosec{% endblock %}
