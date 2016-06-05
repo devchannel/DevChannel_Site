@@ -1,6 +1,8 @@
 import os
 import json
-from collections import OrderedDict
+import collections
+from itertools import filterfalse, tee
+from operator import attrgetter
 
 import flask
 import requests
@@ -11,6 +13,8 @@ from .apps import invite, database, article
 from . import app
 
 cache = SimpleCache()
+
+User = collections.namedtuple('User', 'username skills points last_seen')
 
 
 @app.route('/')
@@ -35,9 +39,36 @@ def resources():
     res = cache.get('resources')
     if not res:
         with open(os.path.join(os.path.dirname(__file__), 'database/resources.json')) as f:
-            res = json.loads(f.read(), object_pairs_hook=OrderedDict)
+            res = json.loads(f.read(), object_pairs_hook=collections.OrderedDict)
         cache.set('resources', res, timeout=1800)  # 30 mins timeout
     return flask.render_template('resources.html', link=res)
+
+
+@app.route('/members')
+def members():
+    all_users = json.loads(database.get_all_users())
+    if not all_users['ok']:
+        flask.abort(500)
+
+    users = [User(username=user['username'], skills=user['skills'], points=user['points'], last_seen='Not Available')
+             for user in all_users['response']]
+
+    order = flask.request.args.get('order')
+    lang = flask.request.args.get('lang', '').lower()
+
+    if order == 'points':
+        users.sort(key=attrgetter('points'), reverse=True)
+    else:
+        users.sort(key=attrgetter('username'))
+
+    if lang:
+        t1, t2 = tee(users)
+        lang_yes = filter(lambda user: lang in user.skills.lower(), t1)
+        lang_no = filterfalse(lambda user: lang in user.skills.lower(), t2)
+
+        users = list(lang_yes) + list(lang_no)
+
+    return flask.render_template('members.html', members=users)
 
 
 @app.route('/join', methods=['GET', 'POST'])
@@ -174,4 +205,4 @@ def page_not_found(error):
         return flask.render_template('errors/500.html'), 500
 
 if __name__ == '__main__':
-    pass
+    app.run(host='0.0.0.0', threaded=True, port=3000)
