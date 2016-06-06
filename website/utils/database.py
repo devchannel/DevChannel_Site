@@ -29,9 +29,9 @@ def choose_identifier(original):
 
 
 def insert_user(skills='', github='', timezone='', email='', username='', slack_id='', points='0'):
-    """ Only apps.invite.py should call it!
+    """ Only utils.invite.py should call it!
 
-    apps.invite confirms email validity, and uniqueness
+    utils.invite confirms email validity, and uniqueness
     """
     data = {"skills": skills, "github": github, "time": timezone, "email": email, "username": username,
             'slack_id': slack_id, "points": points}

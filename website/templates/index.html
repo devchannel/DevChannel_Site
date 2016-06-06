@@ -7,19 +7,21 @@
     <h1 id="title">Announcements</h1>
   </div>
 {% for article in articles %}
-  <div class="row">
-    <div class="announcement_container">
-      <div class="row posters_name">
-        <h4>{{ "{} - {}".format(article.author, article.publish_date) }}</h4>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-        <!--<p class="announcement"> tag is added by body_to_html-->
-          {{ article.body_to_html()|safe }}
+  {% if article.visible %}
+    <div class="row">
+      <div class="announcement_container">
+        <div class="row posters_name">
+          <h4>{{ article.title|markdown }}</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-12 announcement">
+            {{ article.text|markdown }}
+            <i class="pull-right">{{ "{}, {}".format(article.author, article.publish_date) }}</i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {% endif %}
 {% endfor %}
 
 <!--This is the stat counter "DO NOT CHANGE"-->

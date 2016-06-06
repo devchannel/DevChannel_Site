@@ -8,5 +8,9 @@ dependencies:
 - wheel=0.26.0=py35_1
 - pip:
   - flask==0.10.1
+  - Flask-Markdown==0.3
+  - Flask-SQLAlchemy==2.1
+  - Flask-Admin==1.4.0
+  - SQLAlchemy==1.0.11
   - requests==2.9.0
   - tinydb

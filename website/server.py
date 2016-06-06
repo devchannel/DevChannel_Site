@@ -9,7 +9,8 @@ import requests
 from werkzeug.contrib.cache import SimpleCache
 
 from . import server_config
-from .apps import invite, database, article
+from .utils import invite, database, views
+from .models.posts import Post
 from . import app
 
 cache = SimpleCache()
@@ -20,7 +21,7 @@ User = collections.namedtuple('User', 'username skills points last_seen')
 @app.route('/')
 @app.route('/index')
 def index():
-    articles = [article.Article(**params)for params in article.get_articles()]
+    articles = Post.query.all()
     return flask.render_template('index.html', articles=reversed(articles))
 
 
@@ -90,10 +91,8 @@ def join():
 
 
 @app.route('/_database', methods=['GET', 'POST', 'PUT', 'DELETE'])
+@views.must_login
 def _database():
-    if flask.session.get('username') not in server_config.ALLOWED_USERS:
-        flask.abort(403)
-
     args = {var_name: flask.request.args.get(var_name, '').lower()
             for var_name in ('email', 'username', 'slack_id', 'github', 'skills', 'timezone', 'points')}
 
@@ -159,40 +158,6 @@ def auth():
     return 'Something went wrong'
 
 
-@app.route('/_upload', methods=['GET', 'POST'])
-def _upload():
-    if flask.session.get('username') not in server_config.ALLOWED_USERS:
-        flask.abort(403)
-
-    if flask.request.method == 'POST':
-        author = flask.request.form['author']
-        text = flask.request.form['text']
-        text = parse(text)
-        article.save_article(article.Article(author, text))
-        return 'Done'
-    return flask.render_template('_upload.html')
-
-
-def parse(txt):
-    txt = txt.split('\r\n')
-    resp = ['']
-    for line in txt:
-        if line.startswith('    '):
-            if isinstance(resp[-1], str):
-                resp.append([line[4:]])
-            else:
-                resp[-1].append(line[4:])
-        else:
-            if isinstance(resp[-1], list):
-                resp.append(line)
-            else:
-                resp[-1] += '\n' + line
-
-    resp[0] = resp[0][1:]  # delete leading "\n"
-
-    return resp
-
-
 @app.errorhandler(403)
 @app.errorhandler(404)
 @app.errorhandler(500)
@@ -203,6 +168,3 @@ def page_not_found(error):
         return flask.render_template('errors/404.html'), 404
     elif str(error).startswith('500'):
         return flask.render_template('errors/500.html'), 500
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True, port=3000)

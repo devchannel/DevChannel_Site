@@ -3,7 +3,7 @@
 {% block title %}Members{% endblock %}
 {% block head %}
     {{ super() }}
-    <script type="text/javascript" src="static/js/members-search.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/members-search.js') }}"></script>
 {% endblock %}
 
 {% block content %}
