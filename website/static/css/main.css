@@ -267,6 +267,7 @@ ul.sections,
   font-weight: bold;
   padding: 0;
   margin: 1em 0 1em 0;
+  word-wrap: break-word;
   /*padding-top: 10px;*/
   padding-bottom: 10px;
   padding-left: 15px;
