@@ -11,3 +11,7 @@ GIT_CLIENT_SECRET = os.environ.get('GIT_SECRET', '')
 SERVER_SECRET = os.environ.get('SERVER_SECRET', 'topsecret')
 
 HOST_NAME = os.environ.get('HOST_NAME')
+
+USER_DB_PATH = os.environ.get('USER_DB_PATH', 'database/users.json')
+ARTICLE_DB_PATH = os.environ.get('ARTICLE_DB_PATH', 'sqlite:///database/database.db')
+

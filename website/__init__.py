@@ -11,7 +11,7 @@ app.secret_key = server_config.SERVER_SECRET
 
 Markdown(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = server_config.ARTICLE_DB_PATH
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SERVER_NAME'] = server_config.HOST_NAME
 db = SQLAlchemy(app)
