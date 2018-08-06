@@ -1,7 +1,5 @@
 # DevChannel_Site
 
-[DevChannel](http://thedevchannel.com)
-
 ### Dependencies
   1. Python 3
   2. Flask
